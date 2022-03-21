@@ -1,0 +1,4 @@
+repository "2D Project@Splotch_Studios@cloud"
+  path "/"
+    br "/main"
+    co "/main"
