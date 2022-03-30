@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{8a7bd61b-455e-42a2-b251-81376fbc00a0}">
+		<property name="assetPath">
+			<value>epicSpook/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7d6bcb41-61fa-4d2d-9e0c-4b0044943715}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{3e4762a3-b882-4377-90cb-3b676896727a}">
-		<property name="assetPath" />
+	<object class="AudioFile" id="{f6210a6b-0c1d-43ef-a281-34e17e4bd2a6}">
+		<property name="assetPath">
+			<value>epicSpook/synthBass.wav</value>
+		</property>
 		<property name="isStreaming">
 			<value>true</value>
 		</property>

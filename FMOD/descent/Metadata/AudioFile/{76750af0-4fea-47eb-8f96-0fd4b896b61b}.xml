@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{c6b45046-7b9a-4c6e-998c-53f02a04a182}">
-		<property name="assetPath" />
+	<object class="AudioFile" id="{76750af0-4fea-47eb-8f96-0fd4b896b61b}">
+		<property name="assetPath">
+			<value>epicSpook/stringBass.wav</value>
+		</property>
 		<property name="isStreaming">
 			<value>true</value>
 		</property>
@@ -12,7 +14,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>16.363650793650795</value>
+			<value>14.181836734693878</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{7d6bcb41-61fa-4d2d-9e0c-4b0044943715}</destination>
