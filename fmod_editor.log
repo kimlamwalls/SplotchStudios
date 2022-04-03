@@ -8,7 +8,7 @@
 [LOG] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001C93BF52508 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000002C7B8C2B948 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -20,10 +20,78 @@
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 141)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 141)
+[LOG] SystemI::mixerSuspend                    : Suspending output.
+[LOG] SystemI::mixerResume                     : Resuming output.
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002C7B8F0AE78
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002C7B8F0AE78
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002C7B8F09D98
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002C7B8F09D98
+[LOG] SystemI::createSound                     : filename = FMOD/descent/Build/Desktop/testMusic.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 000002C7B8F0ECE8 : node = 000002C74A575320
+[LOG] SystemI::createSound                     : add node to async list : head = 000002C74D047818.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002C7B8F0ECE8
+[LOG] SystemI::createSound                     :     filename = FMOD/descent/Build/Desktop/testMusic.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/descent/Build/Desktop/testMusic.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 691648
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 14624
+[LOG] SystemI::createSound                     :     setdata soundi = 000002C7B8F0DDB8 : node = 000002C74A5750A0
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSound                     :     add node to async list : head = 000002C74D047818.  list count = 0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002C74A575430
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='stringBass', format=5, channels=2, frequency=48000, lengthbytes=163200, lengthpcm=680728, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.138855.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002C7B8F0ECE8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002C7B8F0DDB8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/descent/Build/Desktop/testMusic.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 691648
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 14624
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000002C74A5751B0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='stringBass', format=5, channels=2, frequency=48000, lengthbytes=163200, lengthpcm=680728, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.138855.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002C7B8F0DDB8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002C7B8F0E7D8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002C7B8F0E7D8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002C7B8F0E988
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002C7B8F0E988
+[LOG] SoundI::release                          : stringBass (000002C7B8F0C108)
+[LOG] SoundI::release                          :     stringBass (000002C7499A9228)
+[LOG] SoundI::release                          :     stringBass (000002C7B8F0AE78)
+[LOG] SoundI::release                          : stringBass (000002C7B8F08298)
+[LOG] SoundI::release                          :     stringBass (000002C74C125208)
+[LOG] SoundI::release                          :     stringBass (000002C7B8F09D98)
+[LOG] SystemI::mixerSuspend                    : Suspending output.
+[LOG] SystemI::mixerResume                     : Resuming output.
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002C7B8F0E7D8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002C7B8F0E7D8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002C7B8F0E988
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002C7B8F0E988
+[LOG] SoundI::release                          : stringBass (000002C7B8F0DDB8)
+[LOG] SoundI::release                          :     stringBass (000002C74C125548)
+[LOG] SoundI::release                          :     stringBass (000002C7B8F0E988)
+[LOG] SoundI::release                          : stringBass (000002C7B8F0ECE8)
+[LOG] SoundI::release                          :     stringBass (000002C74C125068)
+[LOG] SoundI::release                          :     stringBass (000002C7B8F0E7D8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 141)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 141)
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 141)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 141)
