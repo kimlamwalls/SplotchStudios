@@ -35,10 +35,10 @@ MonoBehaviour:
   Path: FMODBuildOutput/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637846827634053159
+  lastModified: 637846905269448467
   FileSizes:
   - Name: 
-    Value: 812
+    Value: 866
   Exists: 1
 --- !u!114 &-2895186329640079531
 MonoBehaviour:
@@ -58,6 +58,34 @@ MonoBehaviour:
   lastModified: 637846727383709216
   FileSizes: []
   Exists: 1
+--- !u!114 &-2770781216865170580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/MusicMaster
+  m_EditorClassIdentifier: 
+  Path: event:/Music/MusicMaster
+  Guid:
+    Data1: 544165688
+    Data2: 1116487348
+    Data3: 1992631720
+    Data4: 94764910
+  Banks:
+  - {fileID: 3316359395956805556}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 6549817767224175319}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 16363
 --- !u!114 &-2290453862271450856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,12 +158,13 @@ MonoBehaviour:
   - {fileID: 3316359395956805556}
   EditorEvents:
   - {fileID: -2290453862271450856}
+  - {fileID: -2770781216865170580}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3316359395956805556}
   StringsBanks:
   - {fileID: -5725306419045942584}
-  cacheTime: 637846827634053159
+  cacheTime: 637846905269448467
   cacheVersion: 10
 --- !u!114 &2490029762165593833
 MonoBehaviour:
@@ -176,6 +205,30 @@ MonoBehaviour:
   Path: FMODBuildOutput/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637846827634048158
+  lastModified: 637846905269433470
   FileSizes: []
+  Exists: 1
+--- !u!114 &6549817767224175319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicMaster/Sanity
+  m_EditorClassIdentifier: 
+  Name: Sanity
+  StudioPath: 
+  Min: 0
+  Max: 100
+  Default: 0
+  ID:
+    data1: 1435727295
+    data2: 3558881819
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
