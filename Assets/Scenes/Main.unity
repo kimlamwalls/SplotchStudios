@@ -891,11 +891,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 1428393597
-      Data2: 1312078005
-      Data3: -1018824538
-      Data4: 618854649
-    Path: event:/Music/EpicMusic
+      Data1: 544165688
+      Data2: 1116487348
+      Data3: 1992631720
+      Data4: 94764910
+    Path: event:/Music/MusicMaster
   Event: 
   PlayEvent: 1
   StopEvent: 2
@@ -936,11 +936,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SelectedEvent:
     Guid:
-      Data1: 1428393597
-      Data2: 1312078005
-      Data3: -1018824538
-      Data4: 618854649
-    Path: event:/Music/EpicMusic
+      Data1: 544165688
+      Data2: 1116487348
+      Data3: 1992631720
+      Data4: 94764910
+    Path: event:/Music/MusicMaster
   parameterValue: 0
   ParameterName: Sanity
 --- !u!1 &622004894
@@ -22807,7 +22807,6 @@ GameObject:
   - component: {fileID: 1395509055}
   - component: {fileID: 1395509056}
   - component: {fileID: 1395509057}
-  - component: {fileID: 1395509058}
   m_Layer: 5
   m_Name: SanitySlider
   m_TagString: Untagged
@@ -22889,9 +22888,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1395509058}
-        m_TargetAssemblyTypeName: SetSanity, Assembly-CSharp
-        m_MethodName: SetValueSanity
+      - m_Target: {fileID: 538867131}
+        m_TargetAssemblyTypeName: ParametersSetByNameContinuous, Assembly-CSharp
+        m_MethodName: SetParameter
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22909,26 +22908,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395509054}
   m_CullTransparentMesh: 1
---- !u!114 &1395509058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395509054}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b51601d5d5393794188f62de9ac0dcd7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventName:
-    Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  parameterName: Sanity
 --- !u!1 &1508920076
 GameObject:
   m_ObjectHideFlags: 0
