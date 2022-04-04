@@ -13,10 +13,13 @@ public class ParameterSetByNameInteger : MonoBehaviour
 
     public FMODUnity.EventReference SelectedEvent;
     private FMOD.Studio.EventInstance instance;
-    public float parameterValue;
-    private int intParameter;
-
     public string ParameterName =  "parameterName";
+    public float sanityInput;
+    public string ParameterName2 = "parameterName2";
+    public float trackSelect;
+    private int trackInt;
+   
+
     
     // Start is called before the first frame update
     void Start()
@@ -24,13 +27,18 @@ public class ParameterSetByNameInteger : MonoBehaviour
         instance = FMODUnity.RuntimeManager.CreateInstance(SelectedEvent);
         instance.start();
     }
-
-
-    public void SetParameter(float value)
+    
+    public void SetTrackSelect(float value)
     {
-        intParameter = (int)value;
-        instance.setParameterByName(ParameterName, intParameter);
-        parameterValue = value;
+        trackInt = (int)value;
+        instance.setParameterByName(ParameterName, trackInt);
+        trackSelect = value;
+    }
+
+    public void SetSanity(float value)
+    {
+        instance.setParameterByName(ParameterName, sanityInput);
+        sanityInput = value;
     }
     
     
