@@ -782,7 +782,7 @@ MonoBehaviour:
       - m_Target: {fileID: 538867132}
         m_TargetAssemblyTypeName: ParameterSetByNameInteger, Assembly-CSharp
         m_MethodName: SetParameter
-        m_Mode: 3
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -791,18 +791,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
-      - m_Target: {fileID: 538867128}
-        m_TargetAssemblyTypeName: ParameterSetByNameInteger, Assembly-CSharp
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &418982431
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,7 +1111,7 @@ MonoBehaviour:
       Data3: 1992631720
       Data4: 94764910
     Path: event:/Music/MusicMaster
-  parameterValue: 1
+  parameterValue: 0
   ParameterName: MusicLogic
 --- !u!1 &581254695
 GameObject:
@@ -22827,24 +22815,6 @@ Transform:
   m_Father: {fileID: 622004895}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1235374514 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 298011657654865198, guid: 60109423ff7e74952991f0075f2d3a26, type: 3}
-  m_PrefabInstance: {fileID: 1300935514}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1235374520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1235374514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ceeafe6a46ff7a46b9d7df345cbe7e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sanityVal: 0
 --- !u!1 &1245763268
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
 
+
+
+/// <summary>
+/// /casts float to int first
+/// </summary>
 public class ParameterSetByNameInteger : MonoBehaviour
 {
 
     public FMODUnity.EventReference SelectedEvent;
     private FMOD.Studio.EventInstance instance;
-    public int parameterValue;
-    
+    public float parameterValue;
+    private int intParameter;
+
     public string ParameterName =  "parameterName";
     
     // Start is called before the first frame update
@@ -20,12 +26,11 @@ public class ParameterSetByNameInteger : MonoBehaviour
     }
 
 
-    public void SetParameter(int value)
+    public void SetParameter(float value)
     {
-        
-        instance.setParameterByName(ParameterName, value);
+        intParameter = (int)value;
+        instance.setParameterByName(ParameterName, intParameter);
         parameterValue = value;
-        
     }
     
     
