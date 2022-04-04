@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="474bb3e1-deaa-4cf7-b520-1eb2abdc77f7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.SplotchStudios/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SplotchStudios/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/ParameterSetByNameInteger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/ParameterSetByNameInteger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/ParametersSetByNameContinuous.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/ParametersSetByNameContinuous.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FMODBuildOutput/Desktop/Master.bank" beforeDir="false" afterPath="$PROJECT_DIR$/FMODBuildOutput/Desktop/Master.bank" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FMODBuildOutput/Desktop/Master.strings.bank" beforeDir="false" afterPath="$PROJECT_DIR$/FMODBuildOutput/Desktop/Master.strings.bank" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
-    </list>
+    <list default="true" id="474bb3e1-deaa-4cf7-b520-1eb2abdc77f7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -86,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648963207884</updated>
       <workItem from="1648963223405" duration="599000" />
-      <workItem from="1649047366509" duration="20221000" />
+      <workItem from="1649047366509" duration="20780000" />
     </task>
     <servers />
   </component>
