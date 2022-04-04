@@ -20,6 +20,26 @@ MonoBehaviour:
   - Name: 
     Value: 762
   Exists: 1
+--- !u!114 &-5725306419045942584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FMODBuildOutput/Desktop/Master.strings.bank
+  Name: Desktop/Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637846775657933758
+  FileSizes:
+  - Name: 
+    Value: 912
+  Exists: 1
 --- !u!114 &-2895186329640079531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,14 +98,131 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -8566828346797134608}
-  - {fileID: -2895186329640079531}
+  - {fileID: -5725306419045942584}
+  - {fileID: 3316359395956805556}
+  - {fileID: 2355568246110927051}
   EditorEvents:
-  - {fileID: -1923572485105866361}
+  - {fileID: 6411059496868844572}
+  - {fileID: 2623403430399947672}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -2895186329640079531}
+  - {fileID: 3316359395956805556}
   StringsBanks:
-  - {fileID: -8566828346797134608}
-  cacheTime: 637846727383724215
+  - {fileID: -5725306419045942584}
+  cacheTime: 637846775662424551
   cacheVersion: 10
+--- !u!114 &2355568246110927051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Music.bank
+  m_EditorClassIdentifier: 
+  Path: FMODBuildOutput/Desktop/Music.bank
+  Name: Desktop/Music
+  StudioPath: bank:/Music
+  lastModified: 637846775662424551
+  FileSizes: []
+  Exists: 1
+--- !u!114 &2623403430399947672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/EpicMusic
+  m_EditorClassIdentifier: 
+  Path: event:/EpicMusic
+  Guid:
+    Data1: 1428393597
+    Data2: 1312078005
+    Data3: -1018824538
+    Data4: 618854649
+  Banks:
+  - {fileID: 2355568246110927051}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 6754379026994898328}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 16363
+--- !u!114 &3316359395956805556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Desktop/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FMODBuildOutput/Desktop/Master.bank
+  Name: Desktop/Master
+  StudioPath: bank:/Master
+  lastModified: 637846775657918758
+  FileSizes: []
+  Exists: 1
+--- !u!114 &6411059496868844572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Testbuildsong
+  m_EditorClassIdentifier: 
+  Path: event:/Testbuildsong
+  Guid:
+    Data1: -993360639
+    Data2: 1111680367
+    Data3: 1123836602
+    Data4: -607977014
+  Banks:
+  - {fileID: 3316359395956805556}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6754379026994898328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/EpicMusic/intensity
+  m_EditorClassIdentifier: 
+  Name: intensity
+  StudioPath: 
+  Min: 0
+  Max: 100
+  Default: 0
+  ID:
+    data1: 1435727295
+    data2: 3558881819
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1

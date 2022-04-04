@@ -336,7 +336,7 @@ MonoBehaviour:
   HasSourceProject: 0
   HasPlatforms: 0
   sourceProjectPath: 
-  sourceBankPath: FMODBuildOutput
+  sourceBankPath: FMODBuildOutput/Desktop
   SourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -360,7 +360,8 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Desktop/Master
-  Banks: []
+  Banks:
+  - Desktop/Music
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
