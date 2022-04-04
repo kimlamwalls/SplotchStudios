@@ -35,10 +35,10 @@ MonoBehaviour:
   Path: FMODBuildOutput/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637846905269448467
+  lastModified: 637846946939190731
   FileSizes:
   - Name: 
-    Value: 866
+    Value: 920
   Exists: 1
 --- !u!114 &-2895186329640079531
 MonoBehaviour:
@@ -83,9 +83,10 @@ MonoBehaviour:
   IsOneShot: 0
   Parameters:
   - {fileID: 6549817767224175319}
+  - {fileID: 3739811143212010269}
   MinDistance: 1
   MaxDistance: 20
-  Length: 16363
+  Length: 4125
 --- !u!114 &-2290453862271450856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,7 +165,7 @@ MonoBehaviour:
   - {fileID: 3316359395956805556}
   StringsBanks:
   - {fileID: -5725306419045942584}
-  cacheTime: 637846905269448467
+  cacheTime: 637846946939190731
   cacheVersion: 10
 --- !u!114 &2490029762165593833
 MonoBehaviour:
@@ -205,8 +206,32 @@ MonoBehaviour:
   Path: FMODBuildOutput/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637846905269433470
+  lastModified: 637846946939180718
   FileSizes: []
+  Exists: 1
+--- !u!114 &3739811143212010269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicMaster/MusicLogic
+  m_EditorClassIdentifier: 
+  Name: MusicLogic
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2766260031
+    data2: 3652037254
+  Type: 1
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &6549817767224175319
 MonoBehaviour:
