@@ -14,7 +14,7 @@ public class FMODSanity : MonoBehaviour
     FMODUnity.StudioEventEmitter emitter;
     void Start()
     {
-        var target = GameObject.Find("MusicDetect");
+        var target = GameObject.Find("MusicDetection");
         emitter = target.GetComponent<FMODUnity.StudioEventEmitter>();
     }
 
