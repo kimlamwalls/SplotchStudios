@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Cave
   - Dream
+  - Stone Floor
   layers:
   - Default
   - TransparentFX
