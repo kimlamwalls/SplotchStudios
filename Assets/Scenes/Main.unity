@@ -22418,6 +22418,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tomb_unbroken_vertical
       objectReference: {fileID: 0}
+    - target: {fileID: 2358749426424892844, guid: e12a60dc63bf34543844a3c7b8e7cfb3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690521001405531965, guid: e12a60dc63bf34543844a3c7b8e7cfb3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874099273347100039, guid: e12a60dc63bf34543844a3c7b8e7cfb3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8117650192644289532, guid: e12a60dc63bf34543844a3c7b8e7cfb3, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -22577,7 +22589,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 707921201}
   m_HandleRect: {fileID: 707921200}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -37031,7 +37043,7 @@ GameObject:
   - component: {fileID: 944157335}
   - component: {fileID: 944157334}
   - component: {fileID: 944157336}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TileMap_Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44977,7 +44989,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1004867548}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Decoration_objects_with_colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45643,7 +45655,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.25516194, g: 0.5362132, b: 0.8867924, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 2.21
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
@@ -45693,6 +45705,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider
       objectReference: {fileID: 0}
+    - target: {fileID: 4359420841043337605, guid: fcae9820eb6aa4402a406095edd838d1, type: 3}
+      propertyPath: enableRotation
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6072001277406223828, guid: fcae9820eb6aa4402a406095edd838d1, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -45737,6 +45753,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7012621369626435494, guid: fcae9820eb6aa4402a406095edd838d1, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1334023508}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcae9820eb6aa4402a406095edd838d1, type: 3}
 --- !u!4 &1438126058 stripped
@@ -46368,6 +46388,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1004867548}
     m_Modifications:
+    - target: {fileID: 269953236073436584, guid: d2ebc46e659e54b76ba2156ee43dc3d3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 979661205471275196, guid: d2ebc46e659e54b76ba2156ee43dc3d3, type: 3}
       propertyPath: m_Size.x
       value: 23
@@ -47247,6 +47271,14 @@ PrefabInstance:
     - target: {fileID: 6813265886962530682, guid: d2ebc46e659e54b76ba2156ee43dc3d3, type: 3}
       propertyPath: m_Name
       value: Floor_grate
+      objectReference: {fileID: 0}
+    - target: {fileID: 6813265886962530682, guid: d2ebc46e659e54b76ba2156ee43dc3d3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8199026166318028842, guid: d2ebc46e659e54b76ba2156ee43dc3d3, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2ebc46e659e54b76ba2156ee43dc3d3, type: 3}
@@ -69005,6 +69037,124 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f28fdc7f794947848c3f8c6f30ba80a, type: 3}
+--- !u!1 &2107188391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2107188393}
+  - component: {fileID: 2107188392}
+  m_Layer: 0
+  m_Name: A*
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2107188392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107188391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  data:
+    dataString: UEsDBBQAAAgIAABQIezmw78HdQIAACsFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMty4jAQ/BVK54XChOfedh1C9pCECtnKxRfZGmMVsuTSI0BS/PuOZBs7LBfk7nl0j8b+IlyaCjKr9EZz9qQYkJ8D4s/kx6AjH+FE90ru+Ce0Me+c2cIH0RDzSi1XiEc+zagSrObZL7kXPniMoJM8V7pcsz3EyliDcE6FAaS0sj5bIvQ1ICf8G658yhlPk4U/feJpNR5c8JiBtKC70Gg2mjWxw2g1mq7wN5k2OcO70XQ5X85X09l6OJ6HAk5mgpYVMO+mqzNrq8wXIUyizybCe8qUENw0Iok9V2EIMa2MQ4sYwDhF00GZjy+A7wvrDfSTX/LcgG0moun5nmucXV2V/Fb1QEtqDrWuDyqc77MMiuqST/+xwyjQuVblY9s1GvsOtuDZ4ZWeM2psb959+P67bCePVBxoKuC9APmsNlo5yZC02vlUZ2By3z1ejcUFZIcOr6XegK7qpt1eb3u53sMleD/Fgpepp0bTGtgJFaYddgI03ssfFBw2xjQlEPUq/hp4o/v+ajXEA9fGItW4lF5eqpz2oWQdZubdOBsrLSHAjegKJBX2vMUy9vYCb7he2xvmgfqXqGnecO27cZMS4C5+PL6htup4vSxTqOMTmOLFWcEldKI98YxzipWU9X71Z9Km7ZzOadZL2zvOvq8WWUwmGUvT9C4d5+ndCobRLGULyqLlgkLEogkJu8cl+qRiWwttxoO3JrviEves/bYMNppWYdeZpscN/yxVb+Rc5mqXaQD5Ule4CgeNTfCdZGvGcUA7sJbLcN/kKyFCZQdgybVQEpyuT1bTpKuSkIp/KOuRhMThY5IQD193eavhg8PRN2+LXcjlH1BLAwQUAAAICAAAUCHsHBTLAm0AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0krmRUXJKUlKScZJBWpKxZaquoWlSinliiqGFeWKqYYqhkVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAUCHs5sO/B3UCAAArBQAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAUCHsHBTLAm0AAAB4AAAACQAkAAAAAAAAAAAAAADCAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAHoDAAAAAA==
+    upgradeData: 
+    file_cachedStartup: {fileID: 0}
+    data_cachedStartup: 
+    cacheStartup: 0
+  showNavGraphs: 1
+  showUnwalkableNodes: 1
+  debugMode: 0
+  debugFloor: 0
+  debugRoof: 1
+  manualDebugFloorRoof: 0
+  showSearchTree: 0
+  unwalkableNodeDebugSize: 0.3
+  logPathResults: 1
+  maxNearestNodeDistance: 100
+  scanOnStartup: 1
+  fullGetNearestSearch: 0
+  prioritizeGraphs: 0
+  prioritizeGraphsLimit: 1
+  colorSettings:
+    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
+    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
+    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
+    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
+    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
+    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
+    _AreaColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+  tagNames:
+  - Basic Ground
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  - 31
+  heuristic: 2
+  heuristicScale: 1
+  threadCount: 1
+  maxFrameTime: 10
+  batchGraphUpdates: 0
+  graphUpdateBatchingInterval: 0.2
+  euclideanEmbedding:
+    mode: 0
+    seed: 0
+    pivotPointRoot: {fileID: 0}
+    spreadOutCount: 1
+  showGraphs: 1
+--- !u!4 &2107188393
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107188391}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2132863819
 GameObject:
   m_ObjectHideFlags: 0
