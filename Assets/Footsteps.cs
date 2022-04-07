@@ -5,8 +5,7 @@ using UnityEngine;
 public class Footsteps : MonoBehaviour
 {
 
-    [FMODUnity.EventRef]
-    public string inputsound;
+    public FMODUnity.EventReference SelectedEvent;
     bool playerismoving;
     public float walkingSpeed;
 
@@ -31,7 +30,7 @@ public class Footsteps : MonoBehaviour
         if (playerismoving == true)
         {
             //Debug.Log ("Player is moving");
-            FMODUnity.RuntimeManager.PlayOneShot(inputsound);
+            FMODUnity.RuntimeManager.PlayOneShot(SelectedEvent);
         }
     }
 

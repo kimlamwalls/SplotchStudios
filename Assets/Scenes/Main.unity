@@ -22310,15 +22310,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384760289}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 233391609}
   - {fileID: 2025335794}
   - {fileID: 90878946}
-  m_Father: {fileID: 993231281}
-  m_RootOrder: 3
+  m_Father: {fileID: 2082931862}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &418982431
 GameObject:
@@ -22333,6 +22333,7 @@ GameObject:
   - component: {fileID: 418982432}
   - component: {fileID: 418982436}
   - component: {fileID: 418982435}
+  - component: {fileID: 418982437}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -22347,7 +22348,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 418982431}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &418982433
 Camera:
   m_ObjectHideFlags: 0
@@ -22472,6 +22473,20 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &418982437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418982431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 1074819532}
+  ListenerNumber: -1
 --- !u!1 &434980886
 GameObject:
   m_ObjectHideFlags: 0
@@ -22559,6 +22574,97 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e12a60dc63bf34543844a3c7b8e7cfb3, type: 3}
+--- !u!1 &479318430
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 479318431}
+  - component: {fileID: 479318432}
+  m_Layer: 0
+  m_Name: rivulet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &479318431
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479318430}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.83, y: -34.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1341561995}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &479318432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479318430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1581749091
+      Data2: 1251929276
+      Data3: 528500101
+      Data4: -1604600130
+    Path: event:/Ambience/Water trickle
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!1 &559775628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 559775629}
+  m_Layer: 0
+  m_Name: TileMap_Ambience_Triggers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &559775629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559775628}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2082931862}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &565036281
 GameObject:
   m_ObjectHideFlags: 0
@@ -22672,7 +22778,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 707921201}
   m_HandleRect: {fileID: 707921200}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -89822,7 +89928,8 @@ Transform:
   - {fileID: 910953368}
   - {fileID: 944157333}
   - {fileID: 933553339}
-  - {fileID: 384760290}
+  - {fileID: 2082931862}
+  - {fileID: 1341561995}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -90044,7 +90151,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c65f736382450a14382aaa28d8389827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputsound: 
+  SelectedEvent:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   walkingSpeed: 0
 --- !u!1 &1094925691
 GameObject:
@@ -90534,6 +90647,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 798407375973495378, guid: 60109423ff7e74952991f0075f2d3a26, type: 3}
   m_PrefabInstance: {fileID: 1300935514}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1341561994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1341561995}
+  m_Layer: 0
+  m_Name: Audio_Objects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1341561995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341561994}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 479318431}
+  m_Father: {fileID: 993231281}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1360754407
 GameObject:
   m_ObjectHideFlags: 0
@@ -114210,6 +114354,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8683613487744164240, guid: 4f28fdc7f794947848c3f8c6f30ba80a, type: 3}
   m_PrefabInstance: {fileID: 1118379381}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2082931861
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2082931862}
+  m_Layer: 0
+  m_Name: Audio_Triggers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2082931862
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082931861}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 384760290}
+  - {fileID: 559775629}
+  m_Father: {fileID: 993231281}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2102666949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -114352,6 +114528,10 @@ MonoBehaviour:
     Params:
     - Name: TrackSelect
       Value: 1
+  - Target: {fileID: 0}
+    Params:
+    - Name: TrackSelect
+      Value: 1
   - Target: {fileID: 2132863824}
     Params:
     - Name: TrackSelect
@@ -114371,6 +114551,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollisionTag: Cave
   Emitters:
+  - Target: {fileID: 0}
+    Params:
+    - Name: TrackSelect
+      Value: 0
   - Target: {fileID: 0}
     Params:
     - Name: TrackSelect
@@ -114442,6 +114626,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CollisionTag: Music_off
   Emitters:
+  - Target: {fileID: 0}
+    Params:
+    - Name: TrackSelect
+      Value: 0
   - Target: {fileID: 2132863824}
     Params:
     - Name: TrackSelect
@@ -114459,5 +114647,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c65f736382450a14382aaa28d8389827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputsound: event:/Footsteps
+  SelectedEvent:
+    Guid:
+      Data1: 1550476977
+      Data2: 1251290246
+      Data3: 1149276554
+      Data4: -82133787
+    Path: event:/Footsteps Test
   walkingSpeed: 0.5

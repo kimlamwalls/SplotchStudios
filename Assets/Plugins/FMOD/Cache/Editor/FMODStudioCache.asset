@@ -35,10 +35,10 @@ MonoBehaviour:
   Path: FMODBuildOutput/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637849291383889363
+  lastModified: 637849420014105383
   FileSizes:
   - Name: 
-    Value: 868
+    Value: 1070
   Exists: 1
 --- !u!114 &-2895186329640079531
 MonoBehaviour:
@@ -58,35 +58,6 @@ MonoBehaviour:
   lastModified: 637846727383709216
   FileSizes: []
   Exists: 1
---- !u!114 &-2770781216865170580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Music/MusicMaster
-  m_EditorClassIdentifier: 
-  Path: event:/Music/MusicMaster
-  Guid:
-    Data1: 544165688
-    Data2: 1116487348
-    Data3: 1992631720
-    Data4: 94764910
-  Banks:
-  - {fileID: 3316359395956805556}
-  IsStream: 1
-  Is3D: 0
-  IsOneShot: 0
-  Parameters:
-  - {fileID: 6549817767224175319}
-  - {fileID: 3739811143212010269}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 5000
 --- !u!114 &-1923572485105866361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +85,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1750853947294952817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Terrain
+  m_EditorClassIdentifier: 
+  Name: Terrain
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2623436590
+    data2: 3876010819
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,14 +125,100 @@ MonoBehaviour:
   - {fileID: -5725306419045942584}
   - {fileID: 3316359395956805556}
   EditorEvents:
-  - {fileID: -2770781216865170580}
+  - {fileID: 4890833851999608050}
+  - {fileID: 707195731489664509}
+  - {fileID: 2411526828373204518}
+  - {fileID: 245049782700446953}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3316359395956805556}
   StringsBanks:
   - {fileID: -5725306419045942584}
-  cacheTime: 637849291383889363
+  cacheTime: 637849420014105383
   cacheVersion: 10
+--- !u!114 &245049782700446953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footsteps Test
+  m_EditorClassIdentifier: 
+  Path: event:/Footsteps Test
+  Guid:
+    Data1: 1550476977
+    Data2: 1251290246
+    Data3: 1149276554
+    Data4: -82133787
+  Banks:
+  - {fileID: 3316359395956805556}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 4390093042328416331}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &707195731489664509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Footsteps
+  Guid:
+    Data1: 890949532
+    Data2: 1323997328
+    Data3: -1270918004
+    Data4: 1694300822
+  Banks:
+  - {fileID: 3316359395956805556}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -1750853947294952817}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2411526828373204518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Water trickle
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Water trickle
+  Guid:
+    Data1: -1581749091
+    Data2: 1251929276
+    Data3: 528500101
+    Data4: -1604600130
+  Banks:
+  - {fileID: 3316359395956805556}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 120000
 --- !u!114 &3316359395956805556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,10 +234,10 @@ MonoBehaviour:
   Path: FMODBuildOutput/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637849291383879074
+  lastModified: 637849420014090371
   FileSizes: []
   Exists: 1
---- !u!114 &3739811143212010269
+--- !u!114 &4390093042328416331
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,21 +247,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/MusicMaster/TrackSelect
+  m_Name: parameter:/Footsteps Test/Terrain
   m_EditorClassIdentifier: 
-  Name: TrackSelect
+  Name: Terrain
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 1
   Default: 0
   ID:
-    data1: 2766260031
-    data2: 3652037254
-  Type: 1
+    data1: 2623436590
+    data2: 3876010819
+  Type: 0
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &6549817767224175319
+--- !u!114 &4850238764381552135
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -201,6 +282,59 @@ MonoBehaviour:
     data1: 1435727295
     data2: 3558881819
   Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &4890833851999608050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/MusicMaster
+  m_EditorClassIdentifier: 
+  Path: event:/Music/MusicMaster
+  Guid:
+    Data1: 544165688
+    Data2: 1116487348
+    Data3: 1992631720
+    Data4: 94764910
+  Banks:
+  - {fileID: 3316359395956805556}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 5528282740886224017}
+  - {fileID: 4850238764381552135}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 5000
+--- !u!114 &5528282740886224017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/MusicMaster/TrackSelect
+  m_EditorClassIdentifier: 
+  Name: TrackSelect
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 2766260031
+    data2: 3652037254
+  Type: 1
   IsGlobal: 0
   Labels: []
   Exists: 1
