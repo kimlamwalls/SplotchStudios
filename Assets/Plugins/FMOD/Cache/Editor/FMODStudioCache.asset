@@ -35,10 +35,34 @@ MonoBehaviour:
   Path: FMODBuildOutput/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637848840329480045
+  lastModified: 637849229129021487
   FileSizes:
   - Name: 
-    Value: 868
+    Value: 970
+  Exists: 1
+--- !u!114 &-3867712348339225645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Footsteps/Terrain
+  m_EditorClassIdentifier: 
+  Name: Terrain
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2623436590
+    data2: 3876010819
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &-2895186329640079531
 MonoBehaviour:
@@ -86,7 +110,7 @@ MonoBehaviour:
   - {fileID: 3739811143212010269}
   MinDistance: 1
   MaxDistance: 20
-  Length: 5000
+  Length: 4125
 --- !u!114 &-1923572485105866361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,12 +155,13 @@ MonoBehaviour:
   - {fileID: 3316359395956805556}
   EditorEvents:
   - {fileID: -2770781216865170580}
+  - {fileID: 5909677371283767774}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3316359395956805556}
   StringsBanks:
   - {fileID: -5725306419045942584}
-  cacheTime: 637848840329480045
+  cacheTime: 637849229129021487
   cacheVersion: 10
 --- !u!114 &3316359395956805556
 MonoBehaviour:
@@ -153,7 +178,7 @@ MonoBehaviour:
   Path: FMODBuildOutput/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637848840329469277
+  lastModified: 637849229129001552
   FileSizes: []
   Exists: 1
 --- !u!114 &3739811143212010269
@@ -171,7 +196,7 @@ MonoBehaviour:
   Name: TrackSelect
   StudioPath: 
   Min: 0
-  Max: 2
+  Max: 1
   Default: 0
   ID:
     data1: 2766260031
@@ -180,6 +205,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &5909677371283767774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/Footsteps
+  Guid:
+    Data1: 890949532
+    Data2: 1323997328
+    Data3: -1270918004
+    Data4: 1694300822
+  Banks:
+  - {fileID: 3316359395956805556}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -3867712348339225645}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6549817767224175319
 MonoBehaviour:
   m_ObjectHideFlags: 0
