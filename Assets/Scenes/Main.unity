@@ -23020,7 +23020,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   emptyChest: {fileID: 4468469751869076317, guid: f4b0e57f449bc4747aa2a7df0c83d90f, type: 3}
-  pesosAmount: 5
+  goldCoins: 14
 --- !u!61 &695208003
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23284,7 +23284,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   emptyChest: {fileID: 7553454342033508592, guid: f4b0e57f449bc4747aa2a7df0c83d90f, type: 3}
-  pesosAmount: 5
+  goldCoins: 6
 --- !u!61 &737916834
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -111340,7 +111340,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   emptyChest: {fileID: 4468469751869076317, guid: f4b0e57f449bc4747aa2a7df0c83d90f, type: 3}
-  pesosAmount: 5
+  goldCoins: 16
 --- !u!212 &1456115978
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -111503,7 +111503,7 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   emptyChest: {fileID: 7553454342033508592, guid: f4b0e57f449bc4747aa2a7df0c83d90f, type: 3}
-  pesosAmount: 5
+  goldCoins: 7
 --- !u!61 &1508468015
 BoxCollider2D:
   m_ObjectHideFlags: 0
