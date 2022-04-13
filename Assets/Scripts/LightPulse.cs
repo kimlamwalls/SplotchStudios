@@ -6,7 +6,7 @@ using UnityEngine.Experimental.Rendering.Universal;
 public class LightPulse : MonoBehaviour
 {
     // Components
-    public Light2D light;
+    [SerializeField] Light2D light;
 
     public float minIntensity = 1.1f;
     public float maxIntensity = 1.2f;
