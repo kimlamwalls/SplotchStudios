@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -19,12 +22,15 @@ public class PlayerMovement : MonoBehaviour
     AdventureLog log;
     PlayerHealthBar hb;
 
-   
+    private Light2D[] lights;
+    
     
     void Awake()
     {
         log = GameObject.Find("AdventureLogView").GetComponent<AdventureLog>();
         hb = GameObject.Find("PlayerHealthBar").GetComponent<PlayerHealthBar>();
+        var lightObjects= GameObject.FindGameObjectsWithTag("LIGHT");
+        lights = lightObjects.Select(l => l.GetComponent<Light2D>()).ToArray();
     }
 
     void Start()
@@ -87,6 +93,29 @@ public class PlayerMovement : MonoBehaviour
     {
         // move player
         rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * movement);
+        bool inLight = false;
+        foreach (var light in lights)
+        {
+            // get distance fromplayer to light object
+            var distance = Vector3.Distance(light.transform.position, rb.position);
+            // check if player is inside the lights outside radius
+            if (distance < light.pointLightOuterRadius)
+            {
+                Debug.Log("In light radius");
+                inLight = true;
+                break;
+            }
+            // Debug.Log($"Distance to light: {distance}, light outer radius: {light.pointLightOuterRadius}");
+        }
+
+        if (inLight)
+        {
+            
+        }
+        else
+        {
+            
+        }
     }
 
     void MeleeAttack()

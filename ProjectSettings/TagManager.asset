@@ -8,6 +8,7 @@ TagManager:
   - Dream
   - Stone Floor
   - Music_off
+  - LIGHT
   layers:
   - Default
   - TransparentFX
