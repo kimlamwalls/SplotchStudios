@@ -110529,7 +110529,7 @@ GameObject:
   - component: {fileID: 1059092442}
   m_Layer: 0
   m_Name: StaircaseCandleLight
-  m_TagString: Untagged
+  m_TagString: LIGHT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111099,6 +111099,10 @@ PrefabInstance:
     - target: {fileID: 298011657654865198, guid: 60109423ff7e74952991f0075f2d3a26, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 786647930815667651, guid: 60109423ff7e74952991f0075f2d3a26, type: 3}
+      propertyPath: sanityMultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 798407375973495378, guid: 60109423ff7e74952991f0075f2d3a26, type: 3}
       propertyPath: m_LocalPosition.x
@@ -112386,10 +112390,10 @@ RectTransform:
   m_Father: {fileID: 888786520}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -632.47, y: 280.7}
-  m_SizeDelta: {x: 160, y: 20}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -513, y: 255}
+  m_SizeDelta: {x: 259.8, y: 15.720001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1660000100
 MonoBehaviour:
@@ -112438,7 +112442,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 8.9
+  m_Value: 50
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -135341,7 +135345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: 0
-  sanity: 8.9
+  sanity: 50
 --- !u!61 &2132863821
 BoxCollider2D:
   m_ObjectHideFlags: 0

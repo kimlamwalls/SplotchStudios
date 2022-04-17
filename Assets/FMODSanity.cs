@@ -25,6 +25,8 @@ public class FMODSanity : MonoBehaviour
     
     public void setViaSlider(float value)
     {
+        // Debug.Log("Sanity value updated to : " + value);
         sanity = value;
     }
+    
 }

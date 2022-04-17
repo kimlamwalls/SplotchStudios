@@ -4,10 +4,13 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Experimental.Rendering.Universal;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-  
+
+    [SerializeField] private float sanityMultiplier = 1f;
+    
     public float moveSpeed = 0.7f;
 
     // Component references
@@ -21,7 +24,9 @@ public class PlayerMovement : MonoBehaviour
 
     AdventureLog log;
     PlayerHealthBar hb;
+    Slider sanity;
 
+    // store all the lights in the game
     private Light2D[] lights;
     
     
@@ -29,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     {
         log = GameObject.Find("AdventureLogView").GetComponent<AdventureLog>();
         hb = GameObject.Find("PlayerHealthBar").GetComponent<PlayerHealthBar>();
+        sanity = GameObject.Find("SanitySlider").GetComponent<Slider>();
         var lightObjects= GameObject.FindGameObjectsWithTag("LIGHT");
         lights = lightObjects.Select(l => l.GetComponent<Light2D>()).ToArray();
     }
@@ -108,13 +114,14 @@ public class PlayerMovement : MonoBehaviour
             // Debug.Log($"Distance to light: {distance}, light outer radius: {light.pointLightOuterRadius}");
         }
 
+        // slowly increment/decrement the santy value based on if the user is within the light
         if (inLight)
         {
-            
+            sanity.value += sanityMultiplier * Time.deltaTime;
         }
         else
         {
-            
+            sanity.value -= sanityMultiplier * Time.deltaTime;
         }
     }
 
