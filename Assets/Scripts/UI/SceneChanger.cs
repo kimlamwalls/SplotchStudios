@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    public void  StartGame()
+    public void StartGame()
     {
         SceneManager.LoadScene("Main");
     }
@@ -18,6 +18,11 @@ public class SceneChanger : MonoBehaviour
     // navigate from credits to start menu
     public void BackToStartMenu()
     {
+        SceneManager.LoadScene("StartMenu");
+    }
 
+    public void DeathScene()
+    {
+        SceneManager.LoadScene("Death");
     }
 }
