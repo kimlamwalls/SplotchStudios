@@ -251,4 +251,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aiPath: {fileID: 4359420841043337605}
-  spiderAnimator: {fileID: 8562037662675361349}
+  animator: {fileID: 8562037662675361349}
+  maxDistance: 5
