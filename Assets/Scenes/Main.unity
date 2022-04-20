@@ -22597,6 +22597,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tomb_unbroken_vertical
       objectReference: {fileID: 0}
+    - target: {fileID: 2358749426424892844, guid: e12a60dc63bf34543844a3c7b8e7cfb3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2690521001405531965, guid: e12a60dc63bf34543844a3c7b8e7cfb3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3874099273347100039, guid: e12a60dc63bf34543844a3c7b8e7cfb3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8117650192644289532, guid: e12a60dc63bf34543844a3c7b8e7cfb3, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -110483,7 +110495,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1004867548}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Decoration_objects_with_colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111542,6 +111554,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1004867548}
     m_Modifications:
+    - target: {fileID: 66692868873333240, guid: 216bbe1bd024a49ec97b98b7de69c8e9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1111055872522412349, guid: 216bbe1bd024a49ec97b98b7de69c8e9, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -111589,6 +111605,14 @@ PrefabInstance:
     - target: {fileID: 2055503727108883626, guid: 216bbe1bd024a49ec97b98b7de69c8e9, type: 3}
       propertyPath: m_Name
       value: Tomb_unbroken_horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055503727108883626, guid: 216bbe1bd024a49ec97b98b7de69c8e9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251338528434252261, guid: 216bbe1bd024a49ec97b98b7de69c8e9, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 216bbe1bd024a49ec97b98b7de69c8e9, type: 3}
@@ -112634,6 +112658,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1004867548}
     m_Modifications:
+    - target: {fileID: 269953236073436584, guid: d2ebc46e659e54b76ba2156ee43dc3d3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 979661205471275196, guid: d2ebc46e659e54b76ba2156ee43dc3d3, type: 3}
       propertyPath: m_Size.x
       value: 23
@@ -113513,6 +113541,14 @@ PrefabInstance:
     - target: {fileID: 6813265886962530682, guid: d2ebc46e659e54b76ba2156ee43dc3d3, type: 3}
       propertyPath: m_Name
       value: Floor_grate
+      objectReference: {fileID: 0}
+    - target: {fileID: 6813265886962530682, guid: d2ebc46e659e54b76ba2156ee43dc3d3, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8199026166318028842, guid: d2ebc46e659e54b76ba2156ee43dc3d3, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2ebc46e659e54b76ba2156ee43dc3d3, type: 3}
@@ -135216,6 +135252,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1004867548}
     m_Modifications:
+    - target: {fileID: 66692868873333240, guid: 216bbe1bd024a49ec97b98b7de69c8e9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1111055872522412349, guid: 216bbe1bd024a49ec97b98b7de69c8e9, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -135263,6 +135303,14 @@ PrefabInstance:
     - target: {fileID: 2055503727108883626, guid: 216bbe1bd024a49ec97b98b7de69c8e9, type: 3}
       propertyPath: m_Name
       value: Tomb_unbroken_horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 2055503727108883626, guid: 216bbe1bd024a49ec97b98b7de69c8e9, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8251338528434252261, guid: 216bbe1bd024a49ec97b98b7de69c8e9, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 216bbe1bd024a49ec97b98b7de69c8e9, type: 3}

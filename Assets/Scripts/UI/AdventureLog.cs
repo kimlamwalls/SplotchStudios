@@ -5,27 +5,12 @@ using UnityEngine.UI;
 
 public class AdventureLog : MonoBehaviour
 {
-
-
     private List<Message> Logs = new List<Message>();
 
     public GameObject LogPanel;
     public GameObject textPrefab;
 
     private readonly int MaxLogs = 5;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void AddEventMessage(string message)
     {
         if (Logs.Count >= MaxLogs)
@@ -34,26 +19,34 @@ public class AdventureLog : MonoBehaviour
             Destroy(log.textObj.gameObject);
             Logs.Remove(log);
         }
-
-        //var defaultColour = new Color(1.0f, 1.0f, 1.0f, 0.2f);
-
+        
         var m = new Message();
         // instantiate new prefab inside the log panel
         var newLog = Instantiate(textPrefab, LogPanel.transform);
         m.textObj = newLog.GetComponent<Text>();
         m.textObj.text = message;
-        //m.textObj.color = defaultColour;
         m.msg = message;
-
+        // insert the log at the start of the list
         Logs.Insert(0, m);
 
     }
 
-    private void OnMouseOver()
+    /// <summary>
+    /// When player is low on sanity display one of these messages at random
+    /// </summary>
+    public void LowSanityMessage()
     {
-        Debug.Log("mouse over");
+        var possibleMessages = new []
+        {
+            "Where's the light?",
+            "I think i'm seeing things",
+            "What was that??",
+            "I'm feeling a bit dizzy"
+        };
+        // select random message
+        AddEventMessage(possibleMessages[Random.Range(0, possibleMessages.Length - 1)]);
     }
-
+    
 }
 
 

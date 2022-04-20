@@ -30,6 +30,9 @@ public class PlayerMovement : MonoBehaviour
     private Light2D[] lights;
     
     
+    // message booleans
+    private bool loggedLowSanity;
+    
     void Awake()
     {
         log = GameObject.Find("AdventureLogView").GetComponent<AdventureLog>();
@@ -42,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         log.AddEventMessage("I Awaken to the damp smells of water and stone");
+        // TODO: add a bunch of Invoke functions at random times to trigger story elements
     }
 
 
@@ -58,13 +62,13 @@ public class PlayerMovement : MonoBehaviour
 
 
         // when the player stops moving x and y reset to 0 which causes the down idle animation to play
-        // even though the player is facing a different direction, so we store the lastvector movement of the player
+        // even though the player is facing a different direction, so we store the last vector movement of the player
         // and use that as the animation state, as this is only updated when the player moves, 
         // the player now idles in the last direction they were moving
         if (x != 0 || y != 0)
         {
             prevVector.x = x;
-            prevVector.y = y;    
+            prevVector.y = y;
         }
 
         // update animation state
@@ -93,7 +97,24 @@ public class PlayerMovement : MonoBehaviour
             MeleeAttack();
         }
 
+      
     }
+
+    /// <summary>
+    /// Will log any logs needed to be logged
+    /// </summary>
+    void LogAnyLogs()
+    {
+        // add a log when user has low sanity
+        if (!loggedLowSanity && sanity.value < 20)
+        {
+            loggedLowSanity = true;
+            log.LowSanityMessage();
+        } else if (loggedLowSanity && sanity.value > 35) loggedLowSanity = false;
+        
+    }
+    
+    
 
     void FixedUpdate()
     {
@@ -102,19 +123,19 @@ public class PlayerMovement : MonoBehaviour
         bool inLight = false;
         foreach (var light in lights)
         {
-            // get distance fromplayer to light object
+            // get distance from player to light object
             var distance = Vector3.Distance(light.transform.position, rb.position);
-            // check if player is inside the lights outside radius
-            if (distance < light.pointLightOuterRadius)
-            {
-                Debug.Log("In light radius");
-                inLight = true;
-                break;
-            }
-            // Debug.Log($"Distance to light: {distance}, light outer radius: {light.pointLightOuterRadius}");
+
+            // if player is outside of light radius skip this light
+            if (distance > light.pointLightOuterRadius) continue;
+            
+            Debug.Log("In light radius");
+            inLight = true;
+            break;
+                // Debug.Log($"Distance to light: {distance}, light outer radius: {light.pointLightOuterRadius}");
         }
 
-        // slowly increment/decrement the santy value based on if the user is within the light
+        // slowly increment/decrement the sanity value based on if the user is within the light
         if (inLight)
         {
             sanity.value += sanityMultiplier * Time.deltaTime;
@@ -123,6 +144,7 @@ public class PlayerMovement : MonoBehaviour
         {
             sanity.value -= sanityMultiplier * Time.deltaTime;
         }
+        
     }
 
     void MeleeAttack()
