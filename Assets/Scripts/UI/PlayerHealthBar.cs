@@ -7,7 +7,7 @@ public class PlayerHealthBar : MonoBehaviour
 {
 
     public Slider playerHealthBar;
-    [SerializeField] int Health = 100;
+    [SerializeField] float Health = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +24,24 @@ public class PlayerHealthBar : MonoBehaviour
     public void Damage(int amount)
     {
         Health -= amount;
+        if (Health <= 0) Health = 0;
     }
 
+    public void Damage(float amount)
+    {
+        Health -= amount;
+        if (Health <= 0) Health = 0;
+    }
+    
     public void Heal(int amount)
     {
         Health += amount;
+        if (Health >= 100) Health = 100;
     }
-
+    public void Heal(float amount)
+    {
+        Health += amount;
+        if (Health >= 100) Health = 100;
+    }
 
 }

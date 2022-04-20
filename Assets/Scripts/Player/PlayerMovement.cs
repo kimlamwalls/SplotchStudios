@@ -139,10 +139,20 @@ public class PlayerMovement : MonoBehaviour
         if (inLight)
         {
             sanity.value += sanityMultiplier * Time.deltaTime;
+            if (sanity.value > 95)
+            {
+                hb.Heal((sanityMultiplier * Time.deltaTime));
+            }
         }
         else
         {
             sanity.value -= sanityMultiplier * Time.deltaTime;
+            // slowly start damaging player while the y have low sanity
+            if (sanity.value < 5)
+            {
+                hb.Damage((sanityMultiplier / sanity.value) * Time.deltaTime);
+            }
+            
         }
         
     }
