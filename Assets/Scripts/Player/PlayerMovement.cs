@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Enemy;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Experimental.Rendering.Universal;
@@ -10,9 +11,10 @@ public class PlayerMovement : MonoBehaviour
 {
 
     [SerializeField] private float sanityMultiplier = 1f;
+    [SerializeField] private float attackRange = 0.5f;
+    [SerializeField] private float moveSpeed = 0.7f;
+    [SerializeField] private LayerMask enemyLayers;
     
-    public float moveSpeed = 0.7f;
-
     // Component references
     public Rigidbody2D rb;
     public Animator animator;
@@ -129,7 +131,7 @@ public class PlayerMovement : MonoBehaviour
             // if player is outside of light radius skip this light
             if (distance > light.pointLightOuterRadius) continue;
             
-            Debug.Log("In light radius");
+            // Debug.Log("In light radius");
             inLight = true;
             break;
                 // Debug.Log($"Distance to light: {distance}, light outer radius: {light.pointLightOuterRadius}");
@@ -160,5 +162,23 @@ public class PlayerMovement : MonoBehaviour
     void MeleeAttack()
     {
         animator.SetTrigger("Attack");
+        Collider2D[] enemies =  Physics2D.OverlapCircleAll(transform.position, attackRange, enemyLayers);
+        // Damage enemy
+        foreach(var enemy in enemies)
+        {
+            var enemyObj = enemy.gameObject.GetComponentInChildren<EnemyShared>();
+            enemyObj.Hit(50);
+            if (enemyObj.health <= 0)
+            {
+                Debug.Log("Enemy dead");
+                Destroy(enemy.gameObject);
+            }
+            else
+            {
+                Debug.Log("Enemy Hit: " + enemy.name);    
+            }
+
+            
+        }
     }
 }
