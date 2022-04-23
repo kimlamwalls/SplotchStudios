@@ -44,10 +44,17 @@ public class SpiderEnemyController : EnemyShared
     public override void Hit(float damage)
     {
         health -= damage;
+        
         if (health <= 0)
         {
-            Destroy(this);
+            Kill();
+            Debug.Log("Enemy dead");
+        } else
+        {
+            Debug.Log("Enemy Hit: " + gameObject.name);    
         }
+        DisplayText(damage);
     }
     
+
 }
