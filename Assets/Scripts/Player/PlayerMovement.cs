@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Enemy;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Experimental.Rendering.Universal;
@@ -10,9 +11,10 @@ public class PlayerMovement : MonoBehaviour
 {
 
     [SerializeField] private float sanityMultiplier = 1f;
-    
-    public float moveSpeed = 0.7f;
-
+    [SerializeField] private float attackRange = 1f;
+    [SerializeField] private float moveSpeed = 0.7f;
+    [SerializeField] private LayerMask enemyLayers;
+    [SerializeField] private Transform attackLocation;
     // Component references
     public Rigidbody2D rb;
     public Animator animator;
@@ -129,7 +131,7 @@ public class PlayerMovement : MonoBehaviour
             // if player is outside of light radius skip this light
             if (distance > light.pointLightOuterRadius) continue;
             
-            Debug.Log("In light radius");
+            // Debug.Log("In light radius");
             inLight = true;
             break;
                 // Debug.Log($"Distance to light: {distance}, light outer radius: {light.pointLightOuterRadius}");
@@ -160,5 +162,30 @@ public class PlayerMovement : MonoBehaviour
     void MeleeAttack()
     {
         animator.SetTrigger("Attack");
+        
+        // the below overlays a circle collider and checks for collisions
+        
+        // Collider2D[] enemies =  Physics2D.OverlapCircleAll(attackLocation.position, attackRange, enemyLayers);
+        // foreach(var enemy in enemies)
+        // {
+        //     var enemyObj = enemy.gameObject.GetComponentInChildren<EnemyShared>();
+        //     enemyObj.Hit(5);
+        // }
+        
+        
+        // The below uses a raycast method to detect hits
+        var enemies = Physics2D.CircleCastAll(attackLocation.position, attackRange, movement, attackRange * 2, enemyLayers);
+        foreach(var enemy in enemies)
+        {
+            Debug.Log("Ray hit : " + enemy.transform.name);
+            var obj = enemy.transform.gameObject.GetComponentInChildren<EnemyShared>();
+            obj.Hit(5);
+            // var enemyObj = enemy.collider.gameObject.GetComponent<EnemyShared>();
+            // Debug.DrawLine(new Vector3(enemy.centroid.x, enemy.centroid.y), new Vector3(enemy.point.x, enemy.point.y), Color.green);
+            // .collider.gameObject.GetComponentInChildren<EnemyShared>();
+            // enemyObj.Hit(5);
+        
+        }
     }
+
 }

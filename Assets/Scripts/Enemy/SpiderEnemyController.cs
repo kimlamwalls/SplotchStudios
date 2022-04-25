@@ -5,11 +5,20 @@ using Enemy;
 using UnityEngine;
 using Pathfinding;
 
-public class SpiderEnemyController : MonoBehaviour
+public class SpiderEnemyController : EnemyShared
 {
     public AIPath aiPath;
     public Animator animator;
-    [SerializeField] public float maxDistance = 5f; 
+    [SerializeField] private float maxDistance = 5f;
+    
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Player collision");
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -31,4 +40,21 @@ public class SpiderEnemyController : MonoBehaviour
         // Debug.Log($"x velo: {aiPath.desiredVelocity.x} || y velo: {aiPath.desiredVelocity.y}" );
         // Debug.Log($"Distance: {aiPath.remainingDistance}");
     }
+
+    public override void Hit(float damage)
+    {
+        health -= damage;
+        
+        if (health <= 0)
+        {
+            Kill();
+            Debug.Log("Enemy dead");
+        } else
+        {
+            Debug.Log("Enemy Hit: " + gameObject.name);    
+        }
+        DisplayText(damage);
+    }
+    
+
 }
