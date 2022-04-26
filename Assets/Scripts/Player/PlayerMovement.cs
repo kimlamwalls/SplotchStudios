@@ -76,10 +76,7 @@ public class PlayerMovement : MonoBehaviour
         // update animation state
         animator.SetFloat("Horizontal", prevVector.x);
         animator.SetFloat("Vertical", prevVector.y);
-
-
-
-
+        
 
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
@@ -87,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
         // triggers the damage animation
         if(Input.GetKeyDown(KeyCode.T))
         {
-            animator.SetTrigger("TakeDamage");
+            animator.SetTrigger("   TakeDamage");
             hb.Damage(5);
             log.AddEventMessage("Damage taken");
             
