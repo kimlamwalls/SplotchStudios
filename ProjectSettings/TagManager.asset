@@ -9,6 +9,7 @@ TagManager:
   - Stone Floor
   - Music_off
   - LIGHT
+  - Wood
   layers:
   - Default
   - TransparentFX
