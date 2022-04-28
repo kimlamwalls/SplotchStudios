@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class PlayerHealthBar : MonoBehaviour
 {
-    public bool isAlive = true;
-    public Animator deathMenuAnim;
-    
     public Slider playerHealthBar;
     [SerializeField] public float Health = 100;
 
@@ -28,7 +25,6 @@ public class PlayerHealthBar : MonoBehaviour
         Health -= amount;
         if (Health <= 0) 
             Health = 0;
-            Death();
     }
 
     public void Damage(float amount)
@@ -36,7 +32,6 @@ public class PlayerHealthBar : MonoBehaviour
         Health -= amount;
         if (Health <= 0) 
             Health = 0;
-            Death();
     }
     
     public void Heal(int amount)
@@ -49,11 +44,4 @@ public class PlayerHealthBar : MonoBehaviour
         Health += amount;
         if (Health >= 100) Health = 100;
     }
-    
-    public void Death()
-        {
-            isAlive = false;
-            deathMenuAnim.SetTrigger("Show");
-        }
-
 }
