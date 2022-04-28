@@ -9,7 +9,7 @@ public class PlayerHealthBar : MonoBehaviour
     public Animator deathMenuAnim;
     
     public Slider playerHealthBar;
-    [SerializeField] float Health = 100;
+    [SerializeField] public float Health = 100;
 
     // Start is called before the first frame update
     void Start()

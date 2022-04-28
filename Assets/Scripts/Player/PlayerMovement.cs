@@ -96,6 +96,11 @@ public class PlayerMovement : MonoBehaviour
             MeleeAttack();
         }
 
+        // Load death scene
+        if (hb.Health <= 0)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Death");
+        } 
       
     }
 
