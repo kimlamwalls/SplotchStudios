@@ -6,6 +6,7 @@ using UnityEngine;
 public class Footsteps : MonoBehaviour
 {
 
+    public FMODUnity.StudioEventEmitter Emitter;
     public FMODUnity.EventReference SelectedEvent;
     private FMOD.Studio.EventInstance instance;
     bool playerismoving;
