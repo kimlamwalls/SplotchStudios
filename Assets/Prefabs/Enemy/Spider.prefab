@@ -32,6 +32,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8379601989507340084}
+  - {fileID: 8609667630627831229}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -135,6 +136,36 @@ CircleCollider2D:
   m_Offset: {x: -0.074231446, y: 0.035185933}
   serializedVersion: 2
   m_Radius: 0.37885398
+--- !u!1 &399112693362954887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8609667630627831229}
+  m_Layer: 8
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8609667630627831229
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399112693362954887}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6072001277406223828}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9177009765318221531
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +282,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  FloatingText: {fileID: 1151225809479146716, guid: f37456c6396e84d9c888378edfb5c8fd, type: 3}
-  aiPath: {fileID: 4359420841043337605}
   animator: {fileID: 8562037662675361349}
+  aiPath: {fileID: 4359420841043337605}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  attackLocation: {fileID: 8609667630627831229}
+  attackRange: 1.37
+  attackRate: 5
+  FloatingText: {fileID: 1151225809479146716, guid: f37456c6396e84d9c888378edfb5c8fd, type: 3}
   maxDistance: 5
+  deathAnimationFinished: 0

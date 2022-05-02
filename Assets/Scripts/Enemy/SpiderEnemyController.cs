@@ -7,38 +7,37 @@ using Pathfinding;
 
 public class SpiderEnemyController : EnemyShared
 {
-    public AIPath aiPath;
-    public Animator animator;
-    [SerializeField] private float maxDistance = 5f;
     
+    
+    [SerializeField] private float maxDistance = 5f;
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Player")
-        {
-            Debug.Log("Player collision");
-        }
-    }
+    private bool dead;
 
+    
     // Update is called once per frame
     void Update()
     {
+        if (dead) return;
+        
+        animator.SetFloat("Horizontal", aiPath.desiredVelocity.x);
         if (aiPath.remainingDistance > maxDistance)
         {
             aiPath.canMove = false;
             animator.SetBool("Moving", false);
-            return;
+            
         }
-
-        aiPath.canMove = true;
-        
-        if (aiPath.velocity != Vector3.zero)
+        else
         {
+            aiPath.canMove = true;
             animator.SetBool("Moving", true);
         }
-        animator.SetFloat("Horizontal", aiPath.desiredVelocity.x);
-        // Debug.Log($"x velo: {aiPath.desiredVelocity.x} || y velo: {aiPath.desiredVelocity.y}" );
-        // Debug.Log($"Distance: {aiPath.remainingDistance}");
+
+        if (aiPath.remainingDistance <= attackRange)
+        {
+            Attack();
+        }
+        
+        
     }
 
     public override void Hit(float damage)
@@ -47,14 +46,20 @@ public class SpiderEnemyController : EnemyShared
         
         if (health <= 0)
         {
-            Kill();
-            Debug.Log("Enemy dead");
-        } else
-        {
-            Debug.Log("Enemy Hit: " + gameObject.name);    
-        }
+            animator.SetTrigger("Death");
+            aiPath = null;
+            dead = true;
+            StartCoroutine(DestroyEnemy());
+        } 
+        
+        Debug.Log("Enemy Hit: " + gameObject.name);
         DisplayText(damage);
     }
-    
 
+    IEnumerator DestroyEnemy()
+    {
+        // yield return new WaitForSeconds(1);
+        Kill(2f);
+        yield return null;
+    }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -84,9 +85,9 @@ public class PlayerMovement : MonoBehaviour
         // triggers the damage animation
         if(Input.GetKeyDown(KeyCode.T))
         {
-            animator.SetTrigger("   TakeDamage");
+            animator.SetTrigger("TakeDamage");
             hb.Damage(5);
-            log.AddEventMessage("Damage taken");
+            log.AddEventMessage("Damage taken"); // TODO: REMOVE THIS LOG
             
         }
 
@@ -117,8 +118,18 @@ public class PlayerMovement : MonoBehaviour
         } else if (loggedLowSanity && sanity.value > 35) loggedLowSanity = false;
         
     }
-    
-    
+
+
+    /// <summary>
+    /// Damage the player, updates the players health bar and triggers the damage animation
+    /// </summary>
+    /// <param name="amount">The amount health points to remove from the player</param>
+    public void Damage(float amount)
+    {
+        animator.SetTrigger("TakeDamage");
+        hb.Damage(amount);
+    }
+
 
     void FixedUpdate()
     {
@@ -176,18 +187,22 @@ public class PlayerMovement : MonoBehaviour
         
         
         // The below uses a raycast method to detect hits
-        var enemies = Physics2D.CircleCastAll(attackLocation.position, attackRange, movement, attackRange * 2, enemyLayers);
+        var enemies = Physics2D.CircleCastAll(attackLocation.position, attackRange/2, movement, attackRange, enemyLayers);
         foreach(var enemy in enemies)
         {
-            Debug.Log("Ray hit : " + enemy.transform.name);
             var obj = enemy.transform.gameObject.GetComponentInChildren<EnemyShared>();
-            obj.Hit(5);
+            obj.Hit(105);
             // var enemyObj = enemy.collider.gameObject.GetComponent<EnemyShared>();
             // Debug.DrawLine(new Vector3(enemy.centroid.x, enemy.centroid.y), new Vector3(enemy.point.x, enemy.point.y), Color.green);
             // .collider.gameObject.GetComponentInChildren<EnemyShared>();
             // enemyObj.Hit(5);
         
         }
+        
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(attackLocation.position, attackRange/2);
+    }
 }
