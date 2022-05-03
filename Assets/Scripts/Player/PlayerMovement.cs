@@ -60,6 +60,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // stops movement if in dialogue screen
+        if (DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            return;
+        }
+
         // Input
         var x = Input.GetAxisRaw("Horizontal");
         var y = Input.GetAxisRaw("Vertical");
@@ -128,6 +134,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+
         // move player
         rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * movement);
         bool inLight = false;

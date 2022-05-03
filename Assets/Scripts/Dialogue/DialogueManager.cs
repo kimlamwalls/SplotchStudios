@@ -14,8 +14,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogueText;
 
     private Story currentStory;
-
-    private bool dialogueIsPlaying;
+    public bool dialogueIsPlaying { get; private set; }
 
     private static DialogueManager instance;
 
@@ -28,7 +27,7 @@ public class DialogueManager : MonoBehaviour
         instance = this;
     }
 
-    private static DialogueManager GetInstance()
+    public static DialogueManager GetInstance()
     {
         return instance;
     }
@@ -52,7 +51,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void EnterDialogueMode(TextAsset inkJSON)
+    public void EnterDialogueMode(TextAsset inkJSON)
     {
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;

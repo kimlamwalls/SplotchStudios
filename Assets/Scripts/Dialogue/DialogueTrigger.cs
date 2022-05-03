@@ -26,7 +26,7 @@ public class DialogueTrigger : MonoBehaviour
             //if (InputManager.GetInstance().GetInteractPressed())
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log(inkJSON.text);
+                DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
             }
         }
         else
