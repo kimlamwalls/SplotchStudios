@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Ink.Runtime;
+using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -60,7 +61,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyUp(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             ContinueStory();
         }
@@ -119,7 +120,12 @@ public class DialogueManager : MonoBehaviour
         {
             choices[i].gameObject.SetActive(false);
         }
+
     }
 
-
+    public void MakeChoice(int choiceIndex)
+    {
+        currentStory.ChooseChoiceIndex(choiceIndex);
+        ContinueStory();
+    }
 }
