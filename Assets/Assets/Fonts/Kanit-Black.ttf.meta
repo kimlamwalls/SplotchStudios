@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: faecbadc8ce93fc4e80f582bdfb30b0c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Kanit
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f642beab657df254089a422eac7570d1, type: 3}
+  - {fileID: 12800000, guid: f20893f94ffb9244c824ff62199d2293, type: 3}
+  - {fileID: 12800000, guid: 987ff1330ddc8224e9ccc4ca5025b0c6, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
