@@ -44,11 +44,17 @@ public class PlayerMovement : MonoBehaviour
         lights = lightObjects.Select(l => l.GetComponent<Light2D>()).ToArray();
     }
 
+    
+
     void Start()
     {
-        log.AddEventMessage("I Awaken to the damp smells of water and stone");
+        log.AddEventMessage("Your vision unblurs, dark caverns unveil themselves before you.\n" +
+                            "Your mind is hazy as control returns.\n" + 
+                            "A pendant sits in your hand, a strange symbol in yellow.");
+
         // TODO: add a bunch of Invoke functions at random times to trigger story elements
     }
+    
 
 
     // Update is called once per frame
