@@ -1,21 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 
 public class Footsteps : MonoBehaviour
 {
 
+    public FMODUnity.StudioEventEmitter Emitter;
     public FMODUnity.EventReference SelectedEvent;
+    private FMOD.Studio.EventInstance instance;
     bool playerismoving;
     public float walkingSpeed;
+    public string nameOfParameter = "Footsteps Type: ";
+    public string NameOfTag;
+    public int SetToValue;
 
-
+    void Start()
+    {
+        instance = FMODUnity.RuntimeManager.CreateInstance(SelectedEvent);
+        instance.start();
+        InvokeRepeating("CallFootsteps", 0, walkingSpeed);
+    }
+    
+    
     void Update()
     {
         if (Input.GetAxis("Vertical") >= 0.01f || Input.GetAxis("Horizontal") >= 0.01f || Input.GetAxis("Vertical") <= -0.01f || Input.GetAxis("Horizontal") <= -0.01f)
         {
             //Debug.Log ("Player is moving");
             playerismoving = true;
+
         }
         else if (Input.GetAxis("Vertical") == 0 || Input.GetAxis("Horizontal") == 0)
         {
@@ -24,7 +38,7 @@ public class Footsteps : MonoBehaviour
         }
     }
 
-
+    
     void CallFootsteps()
     {
         if (playerismoving == true)
@@ -34,11 +48,12 @@ public class Footsteps : MonoBehaviour
         }
     }
 
-
-    void Start()
+    void SetFootstepsType(int value)
     {
-        InvokeRepeating("CallFootsteps", 0, walkingSpeed);
+        instance.setParameterByName(nameOfParameter, value);
     }
+
+
 
 
     void OnDisable()
