@@ -25,12 +25,14 @@ public class DialogueManager : MonoBehaviour
 
     private static DialogueManager instance;
 
+    private float time = 1.0f;
+
+    private float timer;
+
     private void Awake()
     {
-        if (instance == null)
-        {
-            Debug.LogWarning("Found more than one DialogueManager");
-        }
+        timer = Time.time;
+
         instance = this;
     }
 
@@ -61,10 +63,16 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        timer += Time.deltaTime;
+        if (timer >= time)
         {
-            ContinueStory();
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                ContinueStory();
+                timer = 0;
+            }
         }
+       
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)
