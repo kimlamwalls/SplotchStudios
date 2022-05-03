@@ -1,0 +1,230 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &81878943360511451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 81878943360511425}
+  - component: {fileID: 81878943360511424}
+  - component: {fileID: 81878943360511455}
+  - component: {fileID: 81878943360511426}
+  - component: {fileID: 81878943360511454}
+  - component: {fileID: 81878943360511453}
+  - component: {fileID: 81878943360511452}
+  - component: {fileID: 81878943360511429}
+  m_Layer: 0
+  m_Name: MusicDetection
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &81878943360511425
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81878943360511451}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &81878943360511424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81878943360511451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 544165688
+      Data2: 1116487348
+      Data3: 1992631720
+      Data4: 94764910
+    Path: event:/Music/MusicMaster
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &81878943360511455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81878943360511451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Cave
+  Emitters:
+  - Target: {fileID: 0}
+    Params:
+    - Name: TrackSelect
+      Value: 0
+  - Target: {fileID: 0}
+    Params:
+    - Name: TrackSelect
+      Value: 0
+  - Target: {fileID: 0}
+    Params:
+    - Name: TrackSelect
+      Value: 0
+  - Target: {fileID: 0}
+    Params:
+    - Name: TrackSelect
+      Value: 0
+  - Target: {fileID: 81878943360511424}
+    Params:
+    - Name: TrackSelect
+      Value: 1
+  TriggerEvent: 5
+--- !u!114 &81878943360511426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81878943360511451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Music_off
+  Emitters:
+  - Target: {fileID: 0}
+    Params:
+    - Name: TrackSelect
+      Value: 0
+  - Target: {fileID: 0}
+    Params:
+    - Name: TrackSelect
+      Value: 0
+  - Target: {fileID: 81878943360511424}
+    Params:
+    - Name: TrackSelect
+      Value: 0
+  TriggerEvent: 5
+--- !u!114 &81878943360511454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81878943360511451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Dream
+  Emitters:
+  - Target: {fileID: 0}
+    Params:
+    - Name: TrackSelect
+      Value: 1
+  - Target: {fileID: 0}
+    Params:
+    - Name: TrackSelect
+      Value: 1
+  - Target: {fileID: 0}
+    Params:
+    - Name: TrackSelect
+      Value: 1
+  - Target: {fileID: 0}
+    Params:
+    - Name: TrackSelect
+      Value: 1
+  - Target: {fileID: 81878943360511424}
+    Params:
+    - Name: TrackSelect
+      Value: 2
+  TriggerEvent: 5
+--- !u!61 &81878943360511453
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81878943360511451}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.07718754, y: -0.24699783}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.089193344, y: 0.08918762}
+  m_EdgeRadius: 0
+--- !u!114 &81878943360511452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81878943360511451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1976536ed84b87f4f82f765442ee6944, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: 0
+  sanity: 100
+--- !u!114 &81878943360511429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81878943360511451}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c65f736382450a14382aaa28d8389827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Emitter: {fileID: 0}
+  SelectedEvent:
+    Guid:
+      Data1: 1550476977
+      Data2: 1251290246
+      Data3: 1149276554
+      Data4: -82133787
+    Path: event:/Footsteps Test
+  walkingSpeed: 0.5
+  nameOfParameter: 'Footsteps Type: '
+  NameOfTag: 
+  SetToValue: 0
