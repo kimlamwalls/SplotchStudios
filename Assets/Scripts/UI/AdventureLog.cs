@@ -10,7 +10,7 @@ public class AdventureLog : MonoBehaviour
     public GameObject LogPanel;
     public GameObject textPrefab;
 
-    private readonly int MaxLogs = 2;
+    private readonly int MaxLogs = 5;
     public void AddEventMessage(string message)
     {
         if (Logs.Count >= MaxLogs)

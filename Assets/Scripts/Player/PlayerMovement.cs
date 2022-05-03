@@ -48,10 +48,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        /*  Moved to new script so when player uses the portal, this dialogue doesn't reappear
+
         log.AddEventMessage("Your vision unblurs, dark caverns unveil themselves before you.\n" +
                             "Your mind is hazy as control returns.\n" + 
                             "A pendant sits in your hand, a strange symbol in yellow.");
 
+        */
+        
         // TODO: add a bunch of Invoke functions at random times to trigger story elements
     }
     
