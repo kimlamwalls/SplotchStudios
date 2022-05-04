@@ -104895,6 +104895,7 @@ GameObject:
   - component: {fileID: 1352810170}
   - component: {fileID: 1352810169}
   - component: {fileID: 1352810167}
+  - component: {fileID: 1352810168}
   m_Layer: 0
   m_Name: Lighting Trigger
   m_TagString: Untagged
@@ -104928,7 +104929,38 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  sceneNames: []
   lighting: {fileID: 836057908}
+--- !u!114 &1352810168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352810166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: Player
+  EventReference:
+    Guid:
+      Data1: -199951187
+      Data2: 1264920223
+      Data3: 1888052624
+      Data4: 1760569042
+    Path: event:/BOss Music
+  Event: 
+  PlayEvent: 5
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!61 &1352810169
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -94,7 +94,7 @@ MonoBehaviour:
   Path: FMODBuildOutput/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637872733050000000
+  lastModified: 637872861733524023
   FileSizes: []
   Exists: 1
 --- !u!114 &-3434961147854950558
@@ -177,6 +177,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 5000
+--- !u!114 &-1121633510600057408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Menu Music
+  m_EditorClassIdentifier: 
+  Path: event:/Menu Music
+  Guid:
+    Data1: 74564339
+    Data2: 1307359033
+    Data3: -1581173361
+    Data4: -1042615475
+  Banks:
+  - {fileID: -3702163759361185693}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,12 +227,14 @@ MonoBehaviour:
   - {fileID: -5280429846263105013}
   - {fileID: 6014514547497353351}
   - {fileID: -8280913928276258049}
+  - {fileID: 4057849878236223816}
+  - {fileID: -1121633510600057408}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3702163759361185693}
   StringsBanks:
   - {fileID: 5248273777831990875}
-  cacheTime: 637872733050000000
+  cacheTime: 637872861733539025
   cacheVersion: 10
 --- !u!114 &2128396703763583630
 MonoBehaviour:
@@ -283,6 +312,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &4057849878236223816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BOss Music
+  m_EditorClassIdentifier: 
+  Path: event:/BOss Music
+  Guid:
+    Data1: -199951187
+    Data2: 1264920223
+    Data3: 1888052624
+    Data4: 1760569042
+  Banks:
+  - {fileID: -3702163759361185693}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 39000
 --- !u!114 &5248273777831990875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -298,10 +354,10 @@ MonoBehaviour:
   Path: FMODBuildOutput/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637872733050000000
+  lastModified: 637872861733539025
   FileSizes:
   - Name: 
-    Value: 1250
+    Value: 1354
   Exists: 1
 --- !u!114 &5630753736291496929
 MonoBehaviour:
