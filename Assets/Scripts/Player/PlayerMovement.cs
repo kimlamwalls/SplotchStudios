@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         sanity = GameObject.Find("SanitySlider").GetComponent<Slider>();
         // find all lights in the game that can restore the players sanity
         var lightObjects= GameObject.FindGameObjectsWithTag("LIGHT");
-        lights = lightObjects.Select(l => l.GetComponent<Light2D>()).ToArray();
+        lights = lightObjects.Select(l => l.GetComponentInChildren<Light2D>()).ToArray();
     }
 
     
@@ -97,16 +97,7 @@ public class PlayerMovement : MonoBehaviour
         
 
         animator.SetFloat("Speed", movement.sqrMagnitude);
-
-        // DEBUG :: REMOVE LATER
-        // triggers the damage animation
-        if(Input.GetKeyDown(KeyCode.T))
-        {
-            animator.SetTrigger("TakeDamage");
-            hb.Damage(5);
-            log.AddEventMessage("Damage taken"); // TODO: REMOVE THIS LOG
-            
-        }
+        
 
         // 'P' key is for attack
         if (Input.GetKeyDown(KeyCode.P))
