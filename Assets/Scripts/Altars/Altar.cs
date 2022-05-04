@@ -36,7 +36,7 @@ namespace Altars
             
             // calculate distance to player
             var distance = Vector3.Distance(gameObject.transform.position, Player.transform.position);
-            Debug.Log("Distance: " + distance);
+            // Debug.Log("Distance: " + distance);
             if (distance > 2) return;
             
             // start timer when the key is pressed down

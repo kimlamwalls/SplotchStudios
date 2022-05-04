@@ -71,11 +71,13 @@ public class PlayerMovement : MonoBehaviour
         {
             if (DialogueManager.GetInstance().dialogueIsPlaying)
             {
+                movement.x = 0;
+                movement.y = 0;
+                animator.SetFloat("Speed", movement.sqrMagnitude);
                 return;
             }
         }
         
-
         // Input
         var x = Input.GetAxisRaw("Horizontal");
         var y = Input.GetAxisRaw("Vertical");
