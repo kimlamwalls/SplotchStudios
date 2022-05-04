@@ -71,11 +71,13 @@ public class PlayerMovement : MonoBehaviour
         {
             if (DialogueManager.GetInstance().dialogueIsPlaying)
             {
+                movement.x = 0;
+                movement.y = 0;
+                animator.SetFloat("Speed", movement.sqrMagnitude);
                 return;
             }
         }
         
-
         // Input
         var x = Input.GetAxisRaw("Horizontal");
         var y = Input.GetAxisRaw("Vertical");
@@ -145,14 +147,6 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        //stops movement if in dialogue screen
-        if (GameObject.Find("DialogueManager") != null)
-        {
-            if (DialogueManager.GetInstance().dialogueIsPlaying)
-            {
-                return;
-            }
-        }
 
         // move player
         rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * movement);
