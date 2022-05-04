@@ -5026,6 +5026,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   light: {fileID: 7089660068453702314}
+  particles: {fileID: 5394807771662524900}
+  lightsOn: 1
+  animator: {fileID: 6992573430098164852}
   minIntensity: 1.15
   maxIntensity: 1.2
   lightSpeed: 0.5

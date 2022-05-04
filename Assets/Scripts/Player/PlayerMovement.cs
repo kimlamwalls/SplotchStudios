@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
         log = GameObject.Find("AdventureLogView").GetComponent<AdventureLog>();
         hb = GameObject.Find("PlayerHealthBar").GetComponent<PlayerHealthBar>();
         sanity = GameObject.Find("SanitySlider").GetComponent<Slider>();
+        // find all lights in the game that can restore the players sanity
         var lightObjects= GameObject.FindGameObjectsWithTag("LIGHT");
         lights = lightObjects.Select(l => l.GetComponent<Light2D>()).ToArray();
     }
@@ -66,10 +67,10 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         // stops movement if in dialogue screen
-        if (DialogueManager.GetInstance().dialogueIsPlaying)
-        {
-            return;
-        }
+        // if (DialogueManager.GetInstance().dialogueIsPlaying)
+        // {
+        //     return;
+        // }
 
         // Input
         var x = Input.GetAxisRaw("Horizontal");

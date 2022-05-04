@@ -100124,7 +100124,6 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  sceneNames: []
   lighting: {fileID: 836057908}
 --- !u!61 &1352810169
 BoxCollider2D:
@@ -108797,6 +108796,10 @@ PrefabInstance:
     - target: {fileID: 8264281565745568978, guid: 3c34db8cf127e884fb038fc84f8538c2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8264281565745568979, guid: 3c34db8cf127e884fb038fc84f8538c2, type: 3}
+      propertyPath: m_Intensity
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 8264281565745568988, guid: 3c34db8cf127e884fb038fc84f8538c2, type: 3}
       propertyPath: m_Name

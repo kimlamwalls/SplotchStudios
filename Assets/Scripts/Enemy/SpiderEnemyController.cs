@@ -46,9 +46,9 @@ public class SpiderEnemyController : EnemyShared
         
         if (health <= 0)
         {
-            animator.SetTrigger("Death");
-            aiPath = null;
+            aiPath.canMove = false;
             dead = true;
+            animator.SetTrigger("Death");
             StartCoroutine(DestroyEnemy());
         } 
         
@@ -59,7 +59,7 @@ public class SpiderEnemyController : EnemyShared
     IEnumerator DestroyEnemy()
     {
         // yield return new WaitForSeconds(1);
-        Kill(2f);
+        Kill(1f);
         yield return null;
     }
 }
