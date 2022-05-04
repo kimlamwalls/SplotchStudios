@@ -14,6 +14,7 @@ namespace Altars
         [SerializeField] private GameObject[] AltarLights;
         [SerializeField] private int TimeBetweenCandleIgnition = 1;
         [SerializeField] private GameObject progressBar;
+        [SerializeField] private ParticleSystem particles;
         
         private float startTime;
         private bool altarRestored;
@@ -24,6 +25,7 @@ namespace Altars
             {
                 l.GetComponentInChildren<Candle>().LightsOff();
             }
+            particles.Stop();
 
             progressBar.transform.localScale = new Vector3(0, 0.05f);
         }
@@ -37,23 +39,30 @@ namespace Altars
             Debug.Log("Distance: " + distance);
             if (distance > 2) return;
             
+            // start timer when the key is pressed down
             if (Input.GetKeyDown(KeyCode.R))
             {
                 progressBar.transform.localScale = new Vector3(0, 0.05f);
                 startTime = Time.time;
+                particles.Play();
             }
 
             if (Input.GetKey(KeyCode.R) && !altarRestored)
             {
                 Debug.Log("Restoring altar...");
-                progressBar.transform.localScale += new Vector3(1f * Time.deltaTime, 0);
+                progressBar.transform.localScale += new Vector3(0.5f * Time.deltaTime, 0);
                 var holdTime = Time.time - startTime;
                 if (holdTime > 3)
                 {
                     altarRestored = true;
+                    particles.Stop();
                     StartCoroutine(Ignite());
                 }
-                
+            }
+            else
+            {
+                particles.Stop();
+                progressBar.transform.localScale = new Vector3(0, 0.05f);
             }
 
             // if player is close, prompt them to press and hold the 'R' key to restore
