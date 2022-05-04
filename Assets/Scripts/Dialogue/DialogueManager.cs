@@ -84,9 +84,9 @@ public class DialogueManager : MonoBehaviour
         ContinueStory();
     }
 
-    private IEnumerator ExitDialogueMode()
+    private void ExitDialogueMode()
     {
-        yield return new WaitForSeconds(0.2f);
+        //yield return new WaitForSeconds(0.2f);
 
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
@@ -102,7 +102,8 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            StartCoroutine(ExitDialogueMode());
+            //StartCoroutine(ExitDialogueMode());
+            ExitDialogueMode();
         }
     }
 
