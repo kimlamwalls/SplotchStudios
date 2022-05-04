@@ -153,9 +153,12 @@ public class PlayerMovement : MonoBehaviour
 
         // move player
         rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * movement);
-        bool inLight = false;
+        var inLight = false;
         foreach (var light in lights)
         {
+            // if the lights intensity is 0 then they are currently turned off
+            if(light.intensity == 0) continue;
+            
             // get distance from player to light object
             var distance = Vector3.Distance(light.transform.position, rb.position);
 
