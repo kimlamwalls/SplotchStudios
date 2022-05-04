@@ -145,6 +145,14 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        //stops movement if in dialogue screen
+        if (GameObject.Find("DialogueManager") != null)
+        {
+            if (DialogueManager.GetInstance().dialogueIsPlaying)
+            {
+                return;
+            }
+        }
 
         // move player
         rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * movement);

@@ -87,7 +87,7 @@ public class DialogueManager : MonoBehaviour
     private void ExitDialogueMode()
     {
         //yield return new WaitForSeconds(0.2f);
-
+        UpdateVariableFromStoryEnd();
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
@@ -99,10 +99,14 @@ public class DialogueManager : MonoBehaviour
         {
             dialogueText.text = currentStory.Continue();
             DisplayChoices();
+            bool closeTriggered = (bool)currentStory.variablesState["closeTriggered"];
+            if (closeTriggered == true)
+            {
+                ExitDialogueMode();
+            }
         }
         else
         {
-            //StartCoroutine(ExitDialogueMode());
             ExitDialogueMode();
         }
     }
@@ -136,5 +140,18 @@ public class DialogueManager : MonoBehaviour
     {
         currentStory.ChooseChoiceIndex(choiceIndex);
         ContinueStory();
+    }
+
+    private void UpdateVariableFromStoryEnd()
+    {
+        var scriptEnding = currentStory.variablesState["scriptEnding"];
+        Debug.Log(scriptEnding);
+        if (scriptEnding.Equals("remember"))
+        {
+            Debug.Log("Remember script triggered");
+        } else if (scriptEnding.Equals("stop"))
+        {
+            Debug.Log("stop script triggered");
+        }
     }
 }
