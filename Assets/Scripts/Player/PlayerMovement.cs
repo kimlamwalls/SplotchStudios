@@ -66,11 +66,15 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // stops movement if in dialogue screen
-        // if (DialogueManager.GetInstance().dialogueIsPlaying)
-        // {
-        //     return;
-        // }
+        //stops movement if in dialogue screen
+        if (GameObject.Find("DialogueManager") != null)
+        {
+            if (DialogueManager.GetInstance().dialogueIsPlaying)
+            {
+                return;
+            }
+        }
+        
 
         // Input
         var x = Input.GetAxisRaw("Horizontal");

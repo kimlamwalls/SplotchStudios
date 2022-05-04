@@ -16,24 +16,28 @@ public class DialogueTrigger : MonoBehaviour
 
     private bool playerInRange;
 
+    private bool triggerFired;
+
     private void Awake()
     {
         playerInRange = false;
+        triggerFired = false;
         visualCue.SetActive(false);
     }
 
     private void Update()
     {
-        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
+        if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying && !triggerFired)
         {
             visualCue.SetActive(true);
-            //if (InputManager.GetInstance().GetInteractPressed())
+            
             if (Input.GetKeyDown(KeyCode.E))
             {
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
                 PaperSound.Play();
                 flipSound();
                 PaperSound.SetParameter("Paper Sound", flipSoundSwitch);
+                triggerFired = true;
             }
             
         }
