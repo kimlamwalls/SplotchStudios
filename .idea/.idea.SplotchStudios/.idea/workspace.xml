@@ -5,33 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="474bb3e1-deaa-4cf7-b520-1eb2abdc77f7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Candle.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Candle/Candle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Candle/Candle.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Candle/CandleStatic.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Candle/CandleStatic.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Candle/candleA_01.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Candle/candleA_01.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Altars.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Altars/Altar.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Altars/Altar.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Candle.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/InkSettings 2.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SplotchStudios/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SplotchStudios/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Candle.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Candle.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/candleA_01.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/candleA_01.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Lights/Candle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Lights/Candle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Boss Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Boss Scene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy/SpiderEnemyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy/SpiderEnemyController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LightPulse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LightPulse.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Candle.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Altars/Altar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Altars/Altar.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +111,7 @@
       <workItem from="1651455915392" duration="9638000" />
       <workItem from="1651567930168" duration="404000" />
       <workItem from="1651582905736" duration="8694000" />
-      <workItem from="1651626243876" duration="9870000" />
+      <workItem from="1651626243876" duration="10859000" />
     </task>
     <servers />
   </component>

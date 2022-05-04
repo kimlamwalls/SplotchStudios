@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Threading;
+using Cinemachine.Utility;
+using UnityEditor.ShaderGraph.Drawing.Inspector.PropertyDrawers;
 using UnityEngine;
 
 namespace Altars
@@ -32,7 +34,8 @@ namespace Altars
             
             // calculate distance to player
             var distance = Vector3.Distance(gameObject.transform.position, Player.transform.position);
-            if (distance > 3) return;
+            
+            if (distance > 1.2) return;
             
             if (Input.GetKeyDown(KeyCode.R))
             {
@@ -42,6 +45,7 @@ namespace Altars
 
             if (Input.GetKey(KeyCode.R) && !altarRestored)
             {
+                Debug.Log("Restoring altar...");
                 progressBar.transform.localScale += new Vector3(1f * Time.deltaTime, 0);
                 var holdTime = Time.time - startTime;
                 if (holdTime > 3)
