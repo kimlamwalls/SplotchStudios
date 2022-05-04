@@ -8,7 +8,6 @@ public class LightningTrigger : Collidable
     public string[] sceneNames;
     public GameObject lighting;
     private Light2D lightingComponent;
-    private double secondsToWait = 1.3f;
     private float startIntensity;
     private float brightnessOfFlash = 12;
     private int flashCounter = 0;
@@ -32,26 +31,27 @@ public class LightningTrigger : Collidable
         if (collider.gameObject.tag == "Player")
         {
             //invoke lighting flashes   
-            InvokeRepeating("Flash", 0.8f, 0.2f);
-            InvokeRepeating("TurnOffFlash", 0.9f, 0.2f);
-
+            InvokeRepeating("Flash", 1.23f, 0.2f);
+            InvokeRepeating("TurnOffFlash", 1.33f, 0.2f);
         }
     }
 
     void Update()
     {
-        if (flashCounter >= 3) ;
+        if (flashCounter>=3) 
         {
             lightingComponent.intensity = startIntensity;
             CancelInvoke("Flash");
         }
     }
+    
+    
    
     void Flash()
     {
         lightingComponent.intensity = brightnessOfFlash;
         flashCounter += 1;
-    }
+    }   
    
     void TurnOffFlash()
     {
