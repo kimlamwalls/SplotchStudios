@@ -24,6 +24,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-8280913928276258049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Paper Open
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Paper Open
+  Guid:
+    Data1: 2053637120
+    Data2: 1306579477
+    Data3: 808687288
+    Data4: -1032294476
+  Banks:
+  - {fileID: -3702163759361185693}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3916484546000235222}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5280429846263105013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,34 +79,6 @@ MonoBehaviour:
   MinDistance: 0.6
   MaxDistance: 45
   Length: 10000
---- !u!114 &-5110848372431001594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Paper Open
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Paper Open
-  Guid:
-    Data1: 2053637120
-    Data2: 1306579477
-    Data3: 808687288
-    Data4: -1032294476
-  Banks:
-  - {fileID: -3702163759361185693}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: 6262049068406516921}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-3702163759361185693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
   Path: FMODBuildOutput/Desktop/Master.bank
   Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 637872733050000000
+  lastModified: 637872730361255391
   FileSizes: []
   Exists: 1
 --- !u!114 &-3434961147854950558
@@ -199,13 +199,13 @@ MonoBehaviour:
   - {fileID: 3481547918567825498}
   - {fileID: -5280429846263105013}
   - {fileID: 6014514547497353351}
-  - {fileID: -5110848372431001594}
+  - {fileID: -8280913928276258049}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3702163759361185693}
   StringsBanks:
   - {fileID: 5248273777831990875}
-  cacheTime: 637872733050000000
+  cacheTime: 637872730361270395
   cacheVersion: 10
 --- !u!114 &2128396703763583630
 MonoBehaviour:
@@ -259,6 +259,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &3916484546000235222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Paper Open/Paper State
+  m_EditorClassIdentifier: 
+  Name: Paper State
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2317927058
+    data2: 2050994905
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &5248273777831990875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,7 +298,7 @@ MonoBehaviour:
   Path: FMODBuildOutput/Desktop/Master.strings.bank
   Name: Desktop/Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637872733050000000
+  lastModified: 637872730361270395
   FileSizes:
   - Name: 
     Value: 1250
@@ -330,30 +354,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 9318
---- !u!114 &6262049068406516921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Paper Open/Paper State
-  m_EditorClassIdentifier: 
-  Name: Paper State
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2317927058
-    data2: 2050994905
-  Type: 1
-  IsGlobal: 0
-  Labels: []
-  Exists: 1
 --- !u!114 &8535723302691711712
 MonoBehaviour:
   m_ObjectHideFlags: 0
