@@ -45,16 +45,32 @@ public class PlayerMovement : MonoBehaviour
         lights = lightObjects.Select(l => l.GetComponent<Light2D>()).ToArray();
     }
 
+    
+
     void Start()
     {
-        log.AddEventMessage("I Awaken to the damp smells of water and stone");
+        /*  Moved to new script so when player uses the portal, this dialogue doesn't reappear
+
+        log.AddEventMessage("Your vision unblurs, dark caverns unveil themselves before you.\n" +
+                            "Your mind is hazy as control returns.\n" + 
+                            "A pendant sits in your hand, a strange symbol in yellow.");
+
+        */
+        
         // TODO: add a bunch of Invoke functions at random times to trigger story elements
     }
+    
 
 
     // Update is called once per frame
     void Update()
     {
+        // stops movement if in dialogue screen
+        if (DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            return;
+        }
+
         // Input
         var x = Input.GetAxisRaw("Horizontal");
         var y = Input.GetAxisRaw("Vertical");
@@ -133,6 +149,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+
         // move player
         rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * movement);
         bool inLight = false;
