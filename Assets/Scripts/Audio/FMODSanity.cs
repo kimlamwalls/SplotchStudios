@@ -9,8 +9,7 @@ public class FMODSanity : MonoBehaviour
     public float slider;
 
     [SerializeField] [Range(0f, 100f)] public float sanity = 0;
-
-    // Start is called before the first frame update
+    
     FMODUnity.StudioEventEmitter emitter;
     void Start()
     {

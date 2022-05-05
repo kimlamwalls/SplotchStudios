@@ -10,6 +10,7 @@ TagManager:
   - Music_off
   - LIGHT
   - Wood
+  - MainMenuMusic
   layers:
   - Default
   - TransparentFX

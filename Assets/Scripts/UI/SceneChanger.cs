@@ -30,6 +30,11 @@ public class SceneChanger : MonoBehaviour
         LoadLevelWithFade("Death");
     }
 
+    public void HowToPlay()
+    {
+        LoadLevelWithFade("Controls");
+    }
+
     public void LoadLevelWithFade(string levelName)
         {
             StartCoroutine(LoadLevel(levelName));
