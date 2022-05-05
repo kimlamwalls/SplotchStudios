@@ -15,6 +15,8 @@ namespace Altars
         [SerializeField] private GameObject progressBar;
         [SerializeField] private ParticleSystem particles;
         
+        AdventureLog log;
+        private bool displayed;
         private float startTime;
         private bool altarRestored;
         private void Start()
@@ -51,11 +53,19 @@ namespace Altars
                 Debug.Log("Restoring altar...");
                 progressBar.transform.localScale += new Vector3(0.5f * Time.deltaTime, 0);
                 var holdTime = Time.time - startTime;
+                if(!displayed)
+                    {
+                        displayed = true;
+                        log = GameObject.Find("AdventureLogView").GetComponent<AdventureLog>();
+                        log.AddEventMessage("As you touch the altar, the skin on your hand crawls into mysterious shapes.");
+                    }
                 if (holdTime > 3)
                 {
                     altarRestored = true;
                     particles.Stop();
                     StartCoroutine(Ignite());
+                    log = GameObject.Find("AdventureLogView").GetComponent<AdventureLog>();
+                    log.AddEventMessage("A familiar symbol appears on the altar.");
                 }
             }
             else
