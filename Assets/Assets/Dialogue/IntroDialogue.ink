@@ -6,26 +6,28 @@ VAR closeTriggered = false
 === main ===
 Your vision unblurs, dark caverns unveil themselves before you.
     + [...]
-        -> next
+        -> text1
 
-=== next ===
-Your mind is hazy as control returns. 
-~scriptEnding = "next"
-    + [...]
-        -> next1
-
-=== next1 ===
+=== text1 ===
 A familiar place with untold secrets.
-~scriptEnding = "next1"
+~scriptEnding = "text1"
     + [...]
-        -> next2
+        -> text2
 
-=== next2 ===
+=== text2 ===
+Your mind is hazy as control returns. 
+~scriptEnding = "text2"
+    + [Have a look around]
+        -> text3
+    + [Stand there and do nothing]
+        -> text3
+
+=== text3 ===
 A pendant sits in your hand, a strange symbol in yellow.
-~scriptEnding = "next2"
+~scriptEnding = "text3"
 ->ending
 
 == ending ===
-* Have a Look around.
+* Close
 ~closeTriggered = true
 ->END
