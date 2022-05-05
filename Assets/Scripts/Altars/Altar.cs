@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Threading;
 using Cinemachine.Utility;
-using UnityEditor.ShaderGraph.Drawing.Inspector.PropertyDrawers;
 using UnityEngine;
 
 namespace Altars
