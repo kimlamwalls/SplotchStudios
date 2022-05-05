@@ -7,6 +7,8 @@ using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour
 {
+    [Header("Params")]
+    [SerializeField] private float typingSpeed = 0.02f;
 
     [Header("Dialogue UI")]
 
@@ -97,7 +99,9 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentStory.canContinue)
         {
-            dialogueText.text = currentStory.Continue();
+            // set text for current dialogue line
+            StartCoroutine(DisplayLine(currentStory.Continue()));
+            // display choices, if any, for this dialogue line
             DisplayChoices();
             bool closeTriggered = (bool)currentStory.variablesState["closeTriggered"];
             if (closeTriggered == true)
@@ -108,6 +112,19 @@ public class DialogueManager : MonoBehaviour
         else
         {
             ExitDialogueMode();
+        }
+    }
+
+    private IEnumerator DisplayLine(string line)
+    {
+        //empty the dialogue text
+        dialogueText.text = "";
+
+        //display each character at a time
+        foreach (char letter in line.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(typingSpeed);
         }
     }
 
