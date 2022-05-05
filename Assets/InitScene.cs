@@ -14,7 +14,7 @@ public class InitScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        musicObject = GameObject.Find("LoadMusicAndMainMenu");
+        musicObject = GameObject.Find("LoadMenuMusic");
         emitter = musicObject.GetComponent<FMODUnity.StudioEventEmitter>();
         emitter.StopInstance();
         //Destroy(musicObject);

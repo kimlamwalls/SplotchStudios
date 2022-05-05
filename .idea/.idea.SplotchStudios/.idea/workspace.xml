@@ -5,20 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="474bb3e1-deaa-4cf7-b520-1eb2abdc77f7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/InitScene.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/InitScene.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/KeepPlayingMusic.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/KeepPlayingMusic.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/LoadMainMenu.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/LoadMainMenu.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenuMusic.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenuMusic.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/UI/CanvasFade.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/UI/CanvasFade.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/UI/Fade in and out splash.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/UI/Fade in and out splash.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Assets/UI/Splotch Logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Assets/UI/Splotch Logo.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SplashScreenFade.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SplashScreenFade.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SplotchStudios/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SplotchStudios/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Controls.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Controls.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartMenu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Audio/FMODSanity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Audio/FMODSanity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SceneChanger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SceneChanger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/UI/Crossfade.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/UI/Crossfade.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/UI/Crossfade_End.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/UI/Crossfade_End.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/UI/Crossfade_Start.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/UI/Crossfade_Start.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitScene.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InitScene.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KeepPlayingMusic.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KeepPlayingMusic.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LoadMainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LoadMainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHealthBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/PlayerHealthBar.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fmod_editor.log" beforeDir="false" afterPath="$PROJECT_DIR$/fmod_editor.log" afterDir="false" />
     </list>
@@ -44,18 +47,14 @@
     <setting file="file://$PROJECT_DIR$/Assets/LightningTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/FootstepsRevised.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.universal@10.8.1/Runtime/2D/Light2D.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/InitScene.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Sanity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/lightFlicker.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Slider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/KeepPlayingMusic.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/DamageText.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SplashScreenFade.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -133,7 +132,8 @@
       <workItem from="1651582905736" duration="8694000" />
       <workItem from="1651626243876" duration="12271000" />
       <workItem from="1651648487276" duration="1409000" />
-      <workItem from="1651675538235" duration="8530000" />
+      <workItem from="1651675538235" duration="9140000" />
+      <workItem from="1651736275002" duration="4254000" />
     </task>
     <servers />
   </component>

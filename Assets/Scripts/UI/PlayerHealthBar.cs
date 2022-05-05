@@ -8,16 +8,25 @@ public class PlayerHealthBar : MonoBehaviour
     public Slider playerHealthBar;
     [SerializeField] public float Health = 100;
 
+
     // Start is called before the first frame update
     void Start()
     {
+        
         playerHealthBar.value = 100;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         playerHealthBar.value = Health;
+        if (Health == 0f)
+        {
+            var SceneController = GameObject.Find("SceneController");
+            var test = SceneController.GetComponent<SceneChanger>();
+            test.DeathScene();
+        }
     }
 
     public void Damage(int amount)
