@@ -12,6 +12,8 @@ TagManager:
   - Wood
   - MainMenuMusic
   - Enemy
+  - TeleporterGate
+  - TeleporterEast
   layers:
   - Default
   - TransparentFX
