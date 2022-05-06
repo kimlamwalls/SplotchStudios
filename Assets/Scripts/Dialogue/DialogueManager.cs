@@ -27,14 +27,13 @@ public class DialogueManager : MonoBehaviour
 
     private static DialogueManager instance;
 
-    private float time = 1.0f;
+    //private float time = 1.0f;
 
-    private float timer;
+    //private float timer;
 
     private void Awake()
     {
-        timer = Time.time;
-
+        //timer = Time.time;
         instance = this;
     }
 
@@ -65,16 +64,18 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        timer += Time.deltaTime;
-        if (timer >= time)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                ContinueStory();
-                timer = 0;
-            }
-        }
-       
+        // No longer required as we can use choices to continue story
+
+        // prevents accidental E spam
+        //timer += Time.deltaTime;
+        //if (timer >= time)
+        //{
+        //    if (Input.GetKeyDown(KeyCode.E))
+        //    {
+        //        ContinueStory();
+        //        timer = 0;
+        //    }
+        //}
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)
@@ -104,6 +105,7 @@ public class DialogueManager : MonoBehaviour
             // display choices, if any, for this dialogue line
             DisplayChoices();
             bool closeTriggered = (bool)currentStory.variablesState["closeTriggered"];
+            // exits dialogue when closeTriggered becomes true in Ink/JSON
             if (closeTriggered == true)
             {
                 ExitDialogueMode();

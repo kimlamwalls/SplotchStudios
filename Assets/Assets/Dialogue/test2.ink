@@ -12,12 +12,12 @@ Which branch do you choose?
 
 === chosen1 ===
 You chose branch 1
-~scriptEnding = "stop"
+~scriptEnding = "String DialogueManager will search using if statement"
 -> ending
 
 === chosen2 ===
 You chose branch 2
-~scriptEnding = "stop2"
+~scriptEnding = "String DialogueManager will search using if statement"
 -> ending
 
 == ending ===
