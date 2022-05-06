@@ -18,11 +18,15 @@ Your mind is hazy as control returns.
     + [Have a look around]
         -> text3
     + [Stand there and do nothing]
-        -> text3
+        -> text4
 
 === text3 ===
 A pendant sits in your hand, a strange symbol in yellow.
-~scriptEnding = "String DialogueManager will search using if statement"
+~scriptEnding = "String DialogueManager will search for this string using if statement"
+->ending
+
+=== text4 ===
+A feeling of safety, and perhaps, conviction. 
 ->ending
 
 == ending ===

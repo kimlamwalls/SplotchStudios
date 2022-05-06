@@ -104,7 +104,7 @@ public class DialogueManager : MonoBehaviour
         if (currentStory.canContinue)
         {
             // set text for current dialogue line
-            StartCoroutine(DisplayLine(currentStory.Continue()));
+            StartCoroutine(DisplayLine(currentStory.ContinueMaximally()));
             // display choices, if any, for this dialogue line
             //DisplayChoices();
             bool closeTriggered = (bool)currentStory.variablesState["closeTriggered"];

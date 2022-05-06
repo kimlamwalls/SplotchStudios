@@ -5,7 +5,7 @@ using UnityEngine;
 public class Chest : Collectable
 {
     public Sprite emptyChest;
-    public int goldCoins = 5;
+    public string text;
     AdventureLog log;
 
     protected override void OnCollect()
@@ -15,7 +15,7 @@ public class Chest : Collectable
         {
             collected = true;
             GetComponent<SpriteRenderer>().sprite = emptyChest;
-            log.AddEventMessage("You have gained " + goldCoins + " gold coins!");
+            log.AddEventMessage(text);
         }
     }
 }

@@ -4,7 +4,9 @@ VAR closeTriggered = false
 -> main
 
 === main ===
-On the wall, an engraving of a vast octopoid being, clad in yellow. A strange feeling stirs inside of you.
+On the wall, an engraving of a vast octopoid being, clad in yellow. 
+
+A strange feeling stirs inside of you.
     + [Try to remember]
         -> remember
     + [Calm your senses]
