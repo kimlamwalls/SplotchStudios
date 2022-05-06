@@ -2,28 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Teleporter : MonoBehaviour
-{
-   private Transform destination;
-   public bool isEast;
-   public float distance = 0.2f;
+public class Teleporter : MonoBehaviour {
 
-   void start()
-   {
-       if (isEast == false)
-       {
-           destination = GameObject.FindGameObjectWithTag("TeleporterEast").GetComponent<Transform>();
-       } else
-       {
-           destination = GameObject.FindGameObjectWithTag("TeleporterGate").GetComponent<Transform>();
-       }
-   }
+	public GameObject portal;
+	private GameObject player;
 
-   void OnTriggerEnter2D(Collider2D other)
-   {
-       if (Vector2.Distance(transform.position, other.transform.position) > distance)
-       {
-           other.transform.position = new Vector2 (destination.position.x, destination.position.y);
-       }
-   }
+
+	// Use this for initialization
+	void Start () {
+		player = GameObject.FindWithTag("Player");
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.tag == "Player") 
+		{
+			player.transform.position = new Vector2 (portal.transform.position.x, portal.transform.position.y);
+		}
+	}
 }
