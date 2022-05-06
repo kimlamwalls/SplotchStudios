@@ -122,13 +122,14 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator DisplayLine(string line)
     {
-        //empty the dialogue text
-        dialogueText.text = "";
+        // set the text to full line, but set visible character to 0
+        dialogueText.text = line;
+        dialogueText.maxVisibleCharacters = 0;
 
         //display each character at a time
         foreach (char letter in line.ToCharArray())
         {
-            dialogueText.text += letter;
+            dialogueText.maxVisibleCharacters++;
             yield return new WaitForSeconds(typingSpeed);
         }
 
