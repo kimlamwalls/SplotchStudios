@@ -83,7 +83,10 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
-
+        for (int i = 0; i < choices.Length; i++)
+        {
+            choices[i].gameObject.SetActive(false);
+        }
         ContinueStory();
     }
 
@@ -103,7 +106,7 @@ public class DialogueManager : MonoBehaviour
             // set text for current dialogue line
             StartCoroutine(DisplayLine(currentStory.Continue()));
             // display choices, if any, for this dialogue line
-            DisplayChoices();
+            //DisplayChoices();
             bool closeTriggered = (bool)currentStory.variablesState["closeTriggered"];
             // exits dialogue when closeTriggered becomes true in Ink/JSON
             if (closeTriggered == true)
@@ -128,10 +131,7 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
-    }
 
-    private void DisplayChoices()
-    {
         List<Choice> currentChoices = currentStory.currentChoices;
 
         if (currentChoices.Count > choices.Length)
@@ -147,17 +147,34 @@ public class DialogueManager : MonoBehaviour
             choicesText[index].text = choice.text;
             index++;
         }
-
-        for (int i = index; i < choices.Length; i++)
-        {
-            choices[i].gameObject.SetActive(false);
-        }
-
     }
+
+    //private void DisplayChoices()
+    //{
+    //    List<Choice> currentChoices = currentStory.currentChoices;
+
+    //    if (currentChoices.Count > choices.Length)
+    //    {
+    //        Debug.LogError("More choices than UI can support.");
+    //    }
+
+    //    // enable and initialise choices
+    //    int index = 0;
+    //    foreach (Choice choice in currentChoices)
+    //    {
+    //        choices[index].gameObject.SetActive(true);
+    //        choicesText[index].text = choice.text;
+    //        index++;
+    //    }
+    //}
 
     public void MakeChoice(int choiceIndex)
     {
         currentStory.ChooseChoiceIndex(choiceIndex);
+        for (int i = 0; i < choices.Length; i++)
+        {
+            choices[i].gameObject.SetActive(false);
+        }
         ContinueStory();
     }
 
