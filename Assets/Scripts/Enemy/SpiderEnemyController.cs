@@ -42,6 +42,9 @@ public class SpiderEnemyController : EnemyShared
 
     public override void Hit(float damage)
     {
+        if(health <= 0) return;
+        
+        
         health -= damage;
         
         if (health <= 0)
@@ -58,7 +61,6 @@ public class SpiderEnemyController : EnemyShared
 
     IEnumerator DestroyEnemy()
     {
-        // yield return new WaitForSeconds(1);
         Kill(1f);
         yield return null;
     }

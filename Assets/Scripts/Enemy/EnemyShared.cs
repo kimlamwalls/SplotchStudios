@@ -16,7 +16,7 @@ namespace Enemy
         [SerializeField] LayerMask playerLayer;
         [SerializeField] Transform attackLocation;
         [SerializeField] public float attackRange;
-        [SerializeField] public float attackRate = 2f;
+        [SerializeField] public float attackRate = 1f;
         private float nextAttackTime;
         
 
@@ -30,19 +30,18 @@ namespace Enemy
         /// </summary>
         protected void Attack()
         {
-            if (Time.time <= nextAttackTime) return;
+            // exit if we cant attack or move
+            if (Time.time <= nextAttackTime || aiPath.canMove == false) return;
+
             aiPath.canMove = false;
             animator.SetTrigger("Attack");
             
-            var playerHits = Physics2D.OverlapCircle(attackLocation.position, attackRange / 2, playerLayer);
-            // check that we hit something
-            if (playerHits == null) return;
-            
-            // get player component and call damage function
-            playerHits.GetComponentInChildren<PlayerMovement>().Damage(5);
+            // overlay a collider, this will be detected by the players OnColliderEnter2d function
+            Physics2D.OverlapCircle(attackLocation.position, attackRange / 2, playerLayer);
+  
             // set next attack time, this is required otherwise the player will die almost instantly
             nextAttackTime = Time.time + 1f / attackRate;
-            
+            Debug.Log("Next attack time: " + nextAttackTime);
             // allow the enemy to move after 2 seconds
             Invoke(nameof(EnemyCanMoveAgain), 2);
         }
@@ -68,7 +67,7 @@ namespace Enemy
         {
             // create a new text object
             var text = Instantiate(FloatingText, transform.position, Quaternion.identity);
-            text.gameObject.GetComponentInChildren<TextMesh>().text = $"-{value:0.##}";
+            text.gameObject.GetComponentInChildren<TextMesh>().text = $"-{value:0}";
         }
 
         /// <summary>
@@ -80,10 +79,7 @@ namespace Enemy
             Debug.Log($"Destroying {gameObject.name} in {delay} seconds");
             Destroy(transform.parent.gameObject, delay);
         }
-        
-        
-        
-        
+  
     }
     
    

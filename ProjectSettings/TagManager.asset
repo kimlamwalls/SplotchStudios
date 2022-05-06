@@ -11,6 +11,7 @@ TagManager:
   - LIGHT
   - Wood
   - MainMenuMusic
+  - Enemy
   layers:
   - Default
   - TransparentFX
