@@ -22,7 +22,7 @@ Your mind is hazy as control returns.
 
 === text3 ===
 A pendant sits in your hand, a strange symbol in yellow.
-~scriptEnding = "String DialogueManager will search using if statement"
+~scriptEnding = "String DialogueManager will search for this string using if statement"
 ->ending
 
 === text4 ===

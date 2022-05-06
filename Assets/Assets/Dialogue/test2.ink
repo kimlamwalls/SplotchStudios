@@ -4,6 +4,7 @@ VAR closeTriggered = false
 -> main
 
 === main ===
+Test Dialogue
 Which branch do you choose?
     + [Branch 1]
         -> chosen1
@@ -12,12 +13,12 @@ Which branch do you choose?
 
 === chosen1 ===
 You chose branch 1
-~scriptEnding = "String DialogueManager will search using if statement"
+~scriptEnding = "DialogueManager will search for this string using if statement"
 -> ending
 
 === chosen2 ===
 You chose branch 2
-~scriptEnding = "String DialogueManager will search using if statement"
+~scriptEnding = "DialogueManager will search for this string using if statement"
 -> ending
 
 == ending ===
