@@ -7,6 +7,7 @@ using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -45,24 +46,7 @@ public class PlayerMovement : MonoBehaviour
         var lightObjects= GameObject.FindGameObjectsWithTag("LIGHT");
         lights = lightObjects.Select(l => l.GetComponentInChildren<Light2D>()).ToArray();
     }
-
     
-
-    void Start()
-    {
-        /*  Moved to new script so when player uses the portal, this dialogue doesn't reappear
-
-        log.AddEventMessage("Your vision unblurs, dark caverns unveil themselves before you.\n" +
-                            "Your mind is hazy as control returns.\n" + 
-                            "A pendant sits in your hand, a strange symbol in yellow.");
-
-        */
-        
-        // TODO: add a bunch of Invoke functions at random times to trigger story elements
-    }
-    
-
-
     // Update is called once per frame
     void Update()
     {
@@ -151,21 +135,19 @@ public class PlayerMovement : MonoBehaviour
         // move player
         rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * movement);
         var inLight = false;
-        foreach (var light in lights)
+        foreach (var light2D in lights)
         {
             // if the lights intensity is 0 then they are currently turned off
-            if(light.intensity == 0) continue;
+            if(light2D.intensity == 0) continue;
             
             // get distance from player to light object
-            var distance = Vector3.Distance(light.transform.position, rb.position);
+            var distance = Vector3.Distance(light2D.transform.position, rb.position);
 
             // if player is outside of light radius skip this light
-            if (distance > light.pointLightOuterRadius) continue;
+            if (distance > light2D.pointLightOuterRadius) continue;
             
-            // Debug.Log("In light radius");
             inLight = true;
             break;
-                // Debug.Log($"Distance to light: {distance}, light outer radius: {light.pointLightOuterRadius}");
         }
 
         // slowly increment/decrement the sanity value based on if the user is within the light
@@ -192,29 +174,20 @@ public class PlayerMovement : MonoBehaviour
 
     void MeleeAttack()
     {
+        const float critAttackChance = 0.01f;
+        const float critMultiplier = 6.5f;
+        
         animator.SetTrigger("Attack");
         
-        // the below overlays a circle collider and checks for collisions
-        
-        // Collider2D[] enemies =  Physics2D.OverlapCircleAll(attackLocation.position, attackRange, enemyLayers);
-        // foreach(var enemy in enemies)
-        // {
-        //     var enemyObj = enemy.gameObject.GetComponentInChildren<EnemyShared>();
-        //     enemyObj.Hit(5);
-        // }
-        
-        
+        const int baseAttack = 10;
         // The below uses a raycast method to detect hits
         var enemies = Physics2D.CircleCastAll(attackLocation.position, attackRange/2, movement, attackRange, enemyLayers);
         foreach(var enemy in enemies)
         {
             var obj = enemy.transform.gameObject.GetComponentInChildren<EnemyShared>();
-            obj.Hit(105);
-            // var enemyObj = enemy.collider.gameObject.GetComponent<EnemyShared>();
-            // Debug.DrawLine(new Vector3(enemy.centroid.x, enemy.centroid.y), new Vector3(enemy.point.x, enemy.point.y), Color.green);
-            // .collider.gameObject.GetComponentInChildren<EnemyShared>();
-            // enemyObj.Hit(5);
-        
+            
+            if (Random.value <= critAttackChance) obj.Hit(baseAttack * critMultiplier);
+            else obj.Hit(baseAttack);
         }
         
     }
@@ -222,5 +195,23 @@ public class PlayerMovement : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(attackLocation.position, attackRange/2);
+    }
+
+    /// <summary>
+    /// Triggered by enemies when they attack.
+    /// </summary>
+    /// <param name="col"></param>
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        var damage = 5f;
+        
+        // if the collider wasn't triggered by an enemy then ignore it
+        if (!col.collider.CompareTag("Enemy")) return;
+
+        if (col.collider.name == "Boss")
+            damage *= 2.5f;
+        
+        // damage player
+        Damage(damage);
     }
 }

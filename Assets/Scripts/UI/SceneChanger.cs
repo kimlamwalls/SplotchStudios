@@ -36,19 +36,19 @@ public class SceneChanger : MonoBehaviour
     }
 
     public void LoadLevelWithFade(string levelName)
-        {
-            StartCoroutine(LoadLevel(levelName));
-        }
+    {
+        StartCoroutine(LoadLevel(levelName));
+    }
 
-        IEnumerator LoadLevel(string levelName)
-        {
-            //play animation
-            transition.SetTrigger("Start");
-            
-            //WaitUntil
-            yield return new WaitForSeconds(transitionTime);
-            
-            //load scene 
-            SceneManager.LoadScene(levelName);
-        }
+    IEnumerator LoadLevel(string levelName)
+    {
+        //play animation
+        transition.SetTrigger("Start");
+        
+        //WaitUntil
+        yield return new WaitForSeconds(transitionTime);
+        
+        //load scene 
+        SceneManager.LoadScene(levelName);
+    }
 }
