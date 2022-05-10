@@ -14,15 +14,17 @@ A strange feeling stirs inside of you.
 
 === remember ===
 Faint memories rush in of a powerful being. Something inside of you moves with reverence. 
+[Movement speed slightly increases]
 ~scriptEnding = "remember"
-->ending
+        ->ending
 
 === calm ===
 Your mind clears as if nothing happened at all. 
+[Sanity threshold slightly increases]
 ~scriptEnding = "calm"
-->ending
+        ->ending
 
 == ending ===
-* Close
+*Close
 ~closeTriggered = true
 ->END

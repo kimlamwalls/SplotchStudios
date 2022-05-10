@@ -32,13 +32,15 @@ public class PlayerMovement : MonoBehaviour
 
     // store all the lights in the game
     private Light2D[] lights;
-    
-    
+
+    private static PlayerMovement instance;
+
     // message booleans
     private bool loggedLowSanity;
     
     void Awake()
     {
+        instance = this;
         log = GameObject.Find("AdventureLogView").GetComponent<AdventureLog>();
         hb = GameObject.Find("PlayerHealthBar").GetComponent<PlayerHealthBar>();
         sanity = GameObject.Find("SanitySlider").GetComponent<Slider>();
@@ -46,7 +48,12 @@ public class PlayerMovement : MonoBehaviour
         var lightObjects= GameObject.FindGameObjectsWithTag("LIGHT");
         lights = lightObjects.Select(l => l.GetComponentInChildren<Light2D>()).ToArray();
     }
-    
+
+    public static PlayerMovement GetInstance()
+    {
+        return instance;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -213,5 +220,20 @@ public class PlayerMovement : MonoBehaviour
         
         // damage player
         Damage(damage);
+    }
+
+    public void modifyMoveSpeed(float f)
+    {
+        moveSpeed += f;
+    }
+
+    public void modifySanityMultiplier(float f)
+    {
+        sanityMultiplier += f;
+    }
+
+    public void modifyAttackRange(float f)
+    {
+        attackRange += f;
     }
 }

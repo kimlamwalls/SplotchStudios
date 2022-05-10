@@ -10,6 +10,11 @@ Your ears catch skittering sounds in the distance.
 
 === text1 ===
 You see a winged insectoid creature with a head covered in antennae.
+    + [...]
+        -> text2
+
+=== text2 === 
+The creature turns to you, motions slightly in acknowldgement and then disappears into the darkness.
         -> ending
 
 === ending ===

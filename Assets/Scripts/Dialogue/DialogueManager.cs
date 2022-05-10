@@ -63,19 +63,6 @@ public class DialogueManager : MonoBehaviour
         {
             return;
         }
-
-        // No longer required as we can use choices to continue story
-
-        // prevents accidental E spam
-        //timer += Time.deltaTime;
-        //if (timer >= time)
-        //{
-        //    if (Input.GetKeyDown(KeyCode.E))
-        //    {
-        //        ContinueStory();
-        //        timer = 0;
-        //    }
-        //}
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)
@@ -185,8 +172,22 @@ public class DialogueManager : MonoBehaviour
         Debug.Log(scriptEnding);
         if (scriptEnding.Equals("remember"))
         {
-            Debug.Log("Remember script triggered");
-        } else if (scriptEnding.Equals("stop"))
+            //increases player movement speed
+            PlayerMovement.GetInstance().modifyMoveSpeed(5);
+        }
+        else if (scriptEnding.Equals("calm"))
+        {
+            //decreases sanity multiplier
+            PlayerMovement.GetInstance().modifySanityMultiplier(-0.2f);
+        }
+        else if (scriptEnding.Equals("touch"))
+        {
+            //increases attack range
+            PlayerMovement.GetInstance().modifyAttackRange(0.1f);
+            //increases sanity multiplier
+            PlayerMovement.GetInstance().modifySanityMultiplier(0.3f);
+        }
+        else if (scriptEnding.Equals("stop"))
         {
             Debug.Log("stop script triggered");
         }
