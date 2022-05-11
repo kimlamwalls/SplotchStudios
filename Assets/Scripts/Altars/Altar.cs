@@ -54,11 +54,11 @@ namespace Altars
                 progressBar.transform.localScale += new Vector3(0.5f * Time.deltaTime, 0);
                 var holdTime = Time.time - startTime;
                 if(!displayed)
-                    {
-                        displayed = true;
-                        log = GameObject.Find("AdventureLogView").GetComponent<AdventureLog>();
-                        log.AddEventMessage("As you touch the altar, the skin on your hand crawls into mysterious shapes.");
-                    }
+                {
+                    displayed = true;
+                    log = GameObject.Find("AdventureLogView").GetComponent<AdventureLog>();
+                    log.AddEventMessage("As you touch the altar, the skin on your hand crawls into mysterious shapes.");
+                }
                 if (holdTime > 3)
                 {
                     altarRestored = true;
@@ -66,6 +66,10 @@ namespace Altars
                     StartCoroutine(Ignite());
                     log = GameObject.Find("AdventureLogView").GetComponent<AdventureLog>();
                     log.AddEventMessage("A familiar symbol appears on the altar.");
+                    log.AddEventMessage("You feel something coursing through you, replenishing your energy");
+                    // when altar is restored, reset player health to max and reset sanity to max
+                    PlayerMovement.GetInstance().FullHeal();
+                    PlayerMovement.GetInstance().FullSanity();
                 }
             }
             else
@@ -93,6 +97,12 @@ namespace Altars
             {
                 l.GetComponentInChildren<Candle>().LightsOn();
                 yield return new WaitForSeconds(TimeBetweenCandleIgnition);
+            }
+
+            PlayerMovement.AltarsRestored++;
+            if (PlayerMovement.AllAltarsRestoredAndHasKey())
+            {
+                log.AddEventMessage("The grinding sound of a gate opening can be heard echoing through the dungeon");
             }
             yield return null;
         }

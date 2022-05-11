@@ -11,7 +11,9 @@ using Random = UnityEngine.Random;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    public static int AltarsRestored = 0;
+    public static bool HasKey = false;
+    
     [SerializeField] private float sanityMultiplier = 1f;
     [SerializeField] private float attackRange = 1f;
     [SerializeField] private float moveSpeed = 0.7f;
@@ -35,9 +37,6 @@ public class PlayerMovement : MonoBehaviour
 
     private static PlayerMovement instance;
 
-    // message booleans
-    private bool loggedLowSanity;
-    
     void Awake()
     {
         instance = this;
@@ -54,6 +53,14 @@ public class PlayerMovement : MonoBehaviour
         return instance;
     }
 
+    public static bool AllAltarsRestoredAndHasKey()
+    {
+        return AltarsRestored == 3 && HasKey;
+    }
+
+    public void FullHeal() => hb.HealToMax();
+    public void FullSanity() => sanity.value = 100;
+    
     // Update is called once per frame
     void Update()
     {
@@ -108,20 +115,6 @@ public class PlayerMovement : MonoBehaviour
             UnityEngine.SceneManagement.SceneManager.LoadScene("Death");
         } 
       
-    }
-
-    /// <summary>
-    /// Will log any logs needed to be logged
-    /// </summary>
-    void LogAnyLogs()
-    {
-        // add a log when user has low sanity
-        if (!loggedLowSanity && sanity.value < 20)
-        {
-            loggedLowSanity = true;
-            log.LowSanityMessage();
-        } else if (loggedLowSanity && sanity.value > 35) loggedLowSanity = false;
-        
     }
 
 

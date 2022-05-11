@@ -27,15 +27,15 @@ public class Portal : Collidable
        startIntensity = lightingComponent.intensity;
    }
 
-   private void OnTriggerEnter2D(Collider2D collider)
+   private void OnTriggerEnter2D(Collider2D triggerCollider)
     {
-        if (collider.gameObject.tag == "Player")
+        if (triggerCollider.gameObject.CompareTag("Player") && PlayerMovement.AllAltarsRestoredAndHasKey())
         {
             // Teleport the player 
             string sceneName = sceneNames[Random.Range(0, sceneNames.Length)];
             UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
 
-        //invoke lighting flashes   
+            //invoke lighting flashes   
              InvokeRepeating("Flash", 0.8f, 0.2f);
              InvokeRepeating("TurnOffFlash", 0.9f, 0.2f);
 
