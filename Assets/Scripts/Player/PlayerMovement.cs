@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
     public static int AltarsRestored = 0;
     public static bool HasKey = false;
     
+    public FMODUnity.StudioEventEmitter SFXSwingSword;
+
+    
     [SerializeField] private float sanityMultiplier = 1f;
     [SerializeField] private float attackRange = 1f;
     [SerializeField] private float moveSpeed = 0.7f;
@@ -176,6 +179,8 @@ public class PlayerMovement : MonoBehaviour
     {
         const float critAttackChance = 0.01f;
         const float critMultiplier = 6.5f;
+        
+        SFXSwingSword.Play();
         
         animator.SetTrigger("Attack");
         
