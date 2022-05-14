@@ -13,6 +13,10 @@ public class SpiderEnemyController : EnemyShared
 
     private bool dead;
 
+    void Start() {
+        // set the starting health to something lower
+        health = 40;
+    }
     
     // Update is called once per frame
     void Update()
