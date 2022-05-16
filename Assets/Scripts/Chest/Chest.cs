@@ -23,7 +23,7 @@ public class Chest : Collectable
             PlayerMovement.HasKey = true;
             if (PlayerMovement.AllAltarsRestoredAndHasKey())
             {
-                log.AddEventMessage("The grinding sound of a gate opening can be heard echoing through the dungeon");
+                log.AddEventMessage("The faint pop of a portal opening can be heard echoing through the dungeon");
             }
             
             

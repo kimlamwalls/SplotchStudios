@@ -7,12 +7,16 @@ public class Portal : Collidable
 {
     public string[] sceneNames;
     public GameObject lighting;
+    public Light2D portalLight;
+    public float minIntensity;
+    public float maxIntensity;
+    public float pulseSpeed;
     private Light2D lightingComponent;
     private double secondsToWait = 1.3f;
     private float startIntensity;
     private float brightnessOfFlash = 12;
     private int flashCounter = 0;
-
+    
    //Component dungeon lighting.GetComponent("light 2D");
 
    private void Awake()
@@ -25,6 +29,7 @@ public class Portal : Collidable
    {
        //get the default lighting
        startIntensity = lightingComponent.intensity;
+       portalLight.intensity = 0.0f;
    }
 
    private void OnTriggerEnter2D(Collider2D triggerCollider)
@@ -44,6 +49,11 @@ public class Portal : Collidable
 
    void Update()
    {
+       if (PlayerMovement.AllAltarsRestoredAndHasKey())
+       {
+           portalLight.intensity = Mathf.PingPong(Time.time * pulseSpeed, maxIntensity) + minIntensity;
+       }
+       
        if (flashCounter >= 3) ;
        {
            lightingComponent.intensity = startIntensity;
