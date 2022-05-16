@@ -14,6 +14,11 @@ public class SceneChanger : MonoBehaviour
         LoadLevelWithFade("Main");
     }
 
+    public void SplashScreenRestart()
+    {
+        LoadLevelWithFade("LoadMainMenu");
+    }
+
     public void CreditsScene()
     {
         LoadLevelWithFade("Credits");

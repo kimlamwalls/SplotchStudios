@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public static bool HasKey = false;
     
     public FMODUnity.StudioEventEmitter SFXSwingSword;
+    public FMODUnity.StudioEventEmitter SFXHitSword;
 
     
     [SerializeField] private float sanityMultiplier = 1f;
@@ -179,7 +180,7 @@ public class PlayerMovement : MonoBehaviour
     {
         const float critAttackChance = 0.01f;
         const float critMultiplier = 6.5f;
-        
+        SFXHitSword.SetParameter("Hit Type", 0);
         SFXSwingSword.Play();
         
         animator.SetTrigger("Attack");
@@ -190,7 +191,7 @@ public class PlayerMovement : MonoBehaviour
         foreach(var enemy in enemies)
         {
             var obj = enemy.transform.gameObject.GetComponentInChildren<EnemyShared>();
-            
+            SFXHitSword.SetParameter("Hit Type", 1);
             if (Random.value <= critAttackChance) obj.Hit(baseAttack * critMultiplier);
             else obj.Hit(baseAttack);
         }
