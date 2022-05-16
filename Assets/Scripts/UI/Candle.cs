@@ -47,9 +47,13 @@ public class Candle : MonoBehaviour
     
     public void LightsOn()
     {
-        animator.gameObject.SetActive(true);
+        if (animator.gameObject.activeSelf)
+        {
+            animator.gameObject.SetActive(true);
+            animator.SetBool("Playing", true);
+        }
+        
         particles.Play();
-        animator.SetBool("Playing", true);
         lightsOn = true;
     }
 }
