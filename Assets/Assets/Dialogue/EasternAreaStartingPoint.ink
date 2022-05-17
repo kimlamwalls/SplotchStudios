@@ -14,7 +14,7 @@ You see a winged insectoid creature with a head covered in antennae.
         -> text2
 
 === text2 === 
-The creature turns to you, motions slightly in acknowldgement and then disappears into the darkness.
+The creature turns to you, motions slightly in acknowledgement and then disappears into the darkness.
         -> ending
 
 === ending ===
