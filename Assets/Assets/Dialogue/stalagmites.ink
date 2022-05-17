@@ -16,8 +16,8 @@ The tarry liquid moves and shifts, enticing you to touch it.
         -> avoid
 
 === touch ===
-The warm liquid moves to cover your hand and weapon. While you feel this will be beneficial, it feels unsettling at the same time.
-[Attack range increases] [Sanity threshold slightly decreases]
+The warm liquid moves to cover your hand and weapon. The effects seem beneficial, but it feels unsettling at the same time.
+[Attack range increases] [Sanity volatility increases]
 ~scriptEnding = "touch"
 ->ending
 

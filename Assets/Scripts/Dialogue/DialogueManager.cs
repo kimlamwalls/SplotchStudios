@@ -173,12 +173,12 @@ public class DialogueManager : MonoBehaviour
         if (scriptEnding.Equals("remember"))
         {
             //increases player movement speed
-            PlayerMovement.GetInstance().modifyMoveSpeed(5);
+            PlayerMovement.GetInstance().modifyMoveSpeed(1);
         }
         else if (scriptEnding.Equals("calm"))
         {
             //decreases sanity multiplier
-            PlayerMovement.GetInstance().modifySanityMultiplier(-0.2f);
+            PlayerMovement.GetInstance().modifySanityMultiplier(-0.3f);
         }
         else if (scriptEnding.Equals("touch"))
         {

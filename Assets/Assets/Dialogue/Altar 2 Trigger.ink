@@ -13,14 +13,14 @@ A strange feeling stirs inside of you.
         -> calm
 
 === remember ===
-Faint memories rush in of a powerful being. Something inside of you moves with reverence. 
-[Movement speed slightly increases]
+Faint memories rush in of a powerful being. Something inside of you moves with reverence.
+[Movement speed increases]
 ~scriptEnding = "remember"
         ->ending
 
 === calm ===
 Your mind clears as if nothing happened at all. 
-[Sanity threshold slightly increases]
+[Sanity volatility decreases]
 ~scriptEnding = "calm"
         ->ending
 
