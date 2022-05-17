@@ -24,17 +24,25 @@ public class FootstepsRevised : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Vertical") >= 0.01f || Input.GetAxis("Horizontal") >= 0.01f || Input.GetAxis("Vertical") <= -0.01f || Input.GetAxis("Horizontal") <= -0.01f)
+        if (GameObject.Find("DialogueManager") != null)
         {
-            //Debug.Log ("Player is moving");
-            playerIsMoving = true;
+            if (DialogueManager.GetInstance().dialogueIsPlaying)
+            {
+                playerIsMoving = false;
+            }
+            else if (Input.GetAxis("Vertical") >= 0.01f || Input.GetAxis("Horizontal") >= 0.01f || Input.GetAxis("Vertical") <= -0.01f || Input.GetAxis("Horizontal") <= -0.01f)
+            {
+                //Debug.Log ("Player is moving");
+                playerIsMoving = true;
+            }
+            else if (Input.GetAxis("Vertical") == 0 || Input.GetAxis("Horizontal") == 0)
+            {
+                //Debug.Log ("Player is not moving");
+                playerIsMoving = false;
+            }
+        }
+        
 
-        }
-        else if (Input.GetAxis("Vertical") == 0 || Input.GetAxis("Horizontal") == 0)
-        {
-            //Debug.Log ("Player is not moving");
-            playerIsMoving = false;
-        }
     }
     
     private void OnTriggerEnter2D(Collider2D other)
