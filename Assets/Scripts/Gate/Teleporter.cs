@@ -7,7 +7,6 @@ public class Teleporter : MonoBehaviour {
 	public GameObject portal;
 	private GameObject player;
 
-
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindWithTag("Player");
