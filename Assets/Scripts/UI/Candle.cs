@@ -10,7 +10,7 @@ public class Candle : MonoBehaviour
     [SerializeField] new Light2D light;
     [SerializeField] private ParticleSystem particles;
     [SerializeField] private bool lightsOn = true;
-    [SerializeField] private Animator animator;
+    [SerializeField] [CanBeNull] private Animator animator = null;
     public float minIntensity = 1.1f;
     public float maxIntensity = 1.2f;
     public float lightSpeed = 0.5f;
@@ -36,18 +36,21 @@ public class Candle : MonoBehaviour
 
     public void LightsOff()
     {
-        animator.SetBool("Playing", false);
-        animator.gameObject.SetActive(false);
+        if (animator != null)
+        {
+              animator.SetBool("Playing", false);
+              animator.gameObject.SetActive(false);
+        }
+      
         
         particles.Stop();
-        
         light.intensity = 0f;
         lightsOn = false;
     }
     
     public void LightsOn()
     {
-        if (animator.gameObject.activeSelf)
+        if (animator != null)
         {
             animator.gameObject.SetActive(true);
             animator.SetBool("Playing", true);
