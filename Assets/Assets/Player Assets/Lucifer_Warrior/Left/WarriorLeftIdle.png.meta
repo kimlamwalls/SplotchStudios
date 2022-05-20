@@ -39,6 +39,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -244,6 +245,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      WarriorLeftIdle_2: -7503098079106430760
+      WarriorLeftIdle_0: 8317663304962230082
+      WarriorLeftIdle_3: 1486912024316626975
+      WarriorLeftIdle_1: -6015318278273071824
+      WarriorLeftIdle_4: -5098439687188788347
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

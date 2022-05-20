@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
+
 
 public class lightFlicker : MonoBehaviour
 
 {
 
     public GameObject lighting2d;
-    private Light2D lightingComponent;
+    private UnityEngine.Rendering.Universal.Light2D lightingComponent;
     private double secondsToWait = 1.3f;
     private float startIntensity;
     private float brightnessOfFlash = 12;
@@ -16,7 +16,7 @@ public class lightFlicker : MonoBehaviour
     private void Awake()
     {   
         lighting2d = GameObject.Find("Dungeon_Global_Light");
-        lightingComponent = lighting2d.GetComponent<Light2D>();
+        lightingComponent = lighting2d.GetComponent<UnityEngine.Rendering.Universal.Light2D>();
         startIntensity = lightingComponent.intensity;
     }
     

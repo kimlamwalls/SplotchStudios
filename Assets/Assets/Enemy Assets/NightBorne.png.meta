@@ -51,6 +51,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -316,6 +317,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      NightBorne_0: -8804577451312863447
+      NightBorne_7: 5888622227354725610
+      NightBorne_2: -8239006915776606373
+      NightBorne_4: 5201573932019284902
+      NightBorne_3: -4665311039209658066
+      NightBorne_5: 3079978775435183711
+      NightBorne_6: -1148362564002726747
+      NightBorne_1: 4541750074466545783
+      NightBorne_8: -1202396436292935338
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
