@@ -42,7 +42,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -269,13 +268,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      WarriorRightAttack01_0: 7568138007130844503
-      WarriorRightAttack01_4: 1481490517766406321
-      WarriorRightAttack01_5: -79508537972916295
-      WarriorRightAttack01_1: 2237851789090495517
-      WarriorRightAttack01_2: -1795877309900906095
-      WarriorRightAttack01_3: -5108461768541622039
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

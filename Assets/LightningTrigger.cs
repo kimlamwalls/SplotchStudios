@@ -1,13 +1,13 @@
 using System;
 using UnityEngine;
-
+using UnityEngine.Experimental.Rendering.Universal;
 using Random = UnityEngine.Random;
 
 public class LightningTrigger : Collidable
 {
     public string[] sceneNames;
     public GameObject lighting;
-    private UnityEngine.Rendering.Universal.Light2D lightingComponent;
+    private Light2D lightingComponent;
     private float startIntensity;
     private float brightnessOfFlash = 12;
     private int flashCounter = 0;
@@ -17,7 +17,7 @@ public class LightningTrigger : Collidable
     private void Awake()
     { 
         lighting = GameObject.Find("Dungeon_Global_Light");
-        lightingComponent = lighting.GetComponent<UnityEngine.Rendering.Universal.Light2D>();
+        lightingComponent = lighting.GetComponent<Light2D>();
     }
 
     void Start()

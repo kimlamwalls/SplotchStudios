@@ -48,7 +48,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -314,16 +313,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Chest_Gold_Full: -1067665510509528309
-      Boss_2: 7401702256180518906
-      Chest_Gold_Closed: 2069415083503212722
-      Boss_1: -6845980268273053146
-      chest_full: -4232372475135122399
-      chest_closed: 8130407264197782721
-      boss_0: -8248157553010839229
-      Chest_Gold_Empty: 4468469751869076317
-      chest_open: 7553454342033508592
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

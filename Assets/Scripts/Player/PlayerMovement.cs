@@ -5,7 +5,7 @@ using System.Linq;
 using Enemy;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
-
+using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     Slider sanity;
 
     // store all the lights in the game
-    private UnityEngine.Rendering.Universal.Light2D[] lights;
+    private Light2D[] lights;
 
     private static PlayerMovement instance;
 

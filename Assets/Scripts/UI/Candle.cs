@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
-
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class Candle : MonoBehaviour
 {
     // Components
-    [SerializeField] new UnityEngine.Rendering.Universal.Light2D light;
+    [SerializeField] new Light2D light;
     [SerializeField] private ParticleSystem particles;
     [SerializeField] private bool lightsOn = true;
     [SerializeField] [CanBeNull] private Animator animator = null;

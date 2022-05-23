@@ -1,17 +1,17 @@
 using System;
 using UnityEngine;
-
+using UnityEngine.Experimental.Rendering.Universal;
 using Random = UnityEngine.Random;
 
 public class Portal : Collidable
 {
     public string[] sceneNames;
     public GameObject lighting;
-    public UnityEngine.Rendering.Universal.Light2D portalLight;
+    public Light2D portalLight;
     public float minIntensity;
     public float maxIntensity;
     public float pulseSpeed;
-    private UnityEngine.Rendering.Universal.Light2D lightingComponent;
+    private Light2D lightingComponent;
     private double secondsToWait = 1.3f;
     private float startIntensity;
     private float brightnessOfFlash = 12;
@@ -22,7 +22,7 @@ public class Portal : Collidable
    private void Awake()
    { 
        lighting = GameObject.Find("Dungeon_Global_Light");
-     lightingComponent = lighting.GetComponent<UnityEngine.Rendering.Universal.Light2D>();
+     lightingComponent = lighting.GetComponent<Light2D>();
    }
 
    void Start()

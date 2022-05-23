@@ -48,7 +48,6 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -317,15 +316,6 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      WarriorUpWalk_7: -5986205952928909146
-      WarriorUpWalk_4: -5369256686490282173
-      WarriorUpWalk_3: 1647810927882470920
-      WarriorUpWalk_0: -5652598678427476347
-      WarriorUpWalk_1: 7396925869319055961
-      WarriorUpWalk_5: -4522473788855225058
-      WarriorUpWalk_2: -480352927777311941
-      WarriorUpWalk_6: 7710290333986723636
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
